@@ -702,8 +702,8 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 	this.instance_1.setTransform(46.5,231.5);
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(303).to({_off:false},0).to({_off:true,x:46.5},18).wait(879));
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(303).to({_off:false},18).wait(94).to({startPosition:0},0).to({y:261.5},20,cjs.Ease.quadInOut).to({_off:true},1).wait(764));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(299).to({_off:false},0).to({_off:true,x:46.5},22,cjs.Ease.quadInOut).wait(879));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(299).to({_off:false},22,cjs.Ease.quadInOut).wait(95).to({startPosition:0},0).to({y:261.5},21,cjs.Ease.quadInOut).to({_off:true},1).wait(762));
 
 }).prototype = p = new cjs.MovieClip();
 
@@ -726,9 +726,9 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 	this.instance_2.setTransform(253,213.5);
 	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance}]},22).to({state:[{t:this.instance_1}]},53).to({state:[{t:this.instance_2}]},580).to({state:[{t:this.instance}]},20).to({state:[]},1).wait(524));
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(22).to({_off:false},0).to({_off:true,y:213.5},53,cjs.Ease.quadInOut).wait(580).to({_off:false,y:285.5},20).to({_off:true},1).wait(524));
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(655).to({_off:false},0).to({_off:true,y:285.5},20).wait(525));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance}]},22).to({state:[{t:this.instance_1}]},53).to({state:[{t:this.instance_2}]},579).to({state:[{t:this.instance}]},21).to({state:[]},1).wait(524));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(22).to({_off:false},0).to({_off:true,y:213.5},53,cjs.Ease.quadInOut).wait(579).to({_off:false,y:285.5},21).to({_off:true},1).wait(524));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(654).to({_off:false},0).to({_off:true,y:285.5},21).wait(525));
 
 }).prototype = p = new cjs.MovieClip();
 
@@ -828,7 +828,7 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 	this.instance_1._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(141).to({_off:false},0).to({_off:true,x:50.5},37,cjs.Ease.quadInOut).wait(1022));
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(141).to({_off:false},37,cjs.Ease.quadInOut).wait(580).to({startPosition:0},0).to({alpha:0},18,cjs.Ease.quadInOut).to({_off:true},1).wait(423));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(141).to({_off:false},37,cjs.Ease.quadInOut).wait(580).to({startPosition:0},0).to({alpha:0},19,cjs.Ease.quadInOut).wait(423));
 
 }).prototype = p = new cjs.MovieClip();
 
@@ -874,9 +874,9 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 	this.instance_3.parent = this;
 	this.instance_3.setTransform(100,264);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance}]},535).to({state:[{t:this.instance_1}]},22).to({state:[{t:this.instance_2}]},98).to({state:[{t:this.instance_3}]},20).to({state:[]},1).wait(524));
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(535).to({_off:false},0).to({_off:true,x:100},22,cjs.Ease.quadInOut).wait(643));
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(655).to({_off:false},0).to({_off:true,y:264},20,cjs.Ease.quadInOut).wait(525));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance}]},536).to({state:[{t:this.instance_1}]},21).to({state:[{t:this.instance_2}]},97).to({state:[{t:this.instance_3}]},21).to({state:[]},1).wait(524));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(536).to({_off:false},0).to({_off:true,x:100},21,cjs.Ease.quadInOut).wait(643));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(654).to({_off:false},0).to({_off:true,y:264},21,cjs.Ease.quadInOut).wait(525));
 
 }).prototype = p = new cjs.MovieClip();
 
@@ -896,7 +896,7 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 	this.instance_1._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(197).to({_off:false},0).to({_off:true,x:72.5},48,cjs.Ease.quadInOut).wait(955));
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(197).to({_off:false},48,cjs.Ease.quadInOut).wait(58).to({startPosition:0},0).to({y:270},17,cjs.Ease.quadInOut).to({_off:true},1).wait(879));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(197).to({_off:false},48,cjs.Ease.quadInOut).wait(54).to({startPosition:0},0).to({y:270},21,cjs.Ease.quadInOut).to({_off:true},1).wait(879));
 
 }).prototype = p = new cjs.MovieClip();
 
@@ -952,8 +952,8 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 	this.instance_1.parent = this;
 	this.instance_1.setTransform(150,125);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance}]},535).to({state:[{t:this.instance_1}]},22).to({state:[]},119).wait(524));
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(535).to({_off:false},0).to({_off:true,x:150},22,cjs.Ease.quadInOut).wait(643));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance}]},536).to({state:[{t:this.instance_1}]},21).to({state:[]},119).wait(524));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(536).to({_off:false},0).to({_off:true,x:150},21,cjs.Ease.quadInOut).wait(643));
 
 }).prototype = p = new cjs.MovieClip();
 
@@ -990,7 +990,7 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 	this.instance_1.parent = this;
 	this.instance_1.setTransform(150,125);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance}]},299).to({state:[{t:this.instance_1}]},22).to({state:[]},115).wait(764));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance}]},299).to({state:[{t:this.instance_1}]},22).to({state:[]},117).wait(762));
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(299).to({_off:false},0).to({_off:true,x:150},22,cjs.Ease.quadInOut).wait(879));
 
 }).prototype = p = new cjs.MovieClip();
