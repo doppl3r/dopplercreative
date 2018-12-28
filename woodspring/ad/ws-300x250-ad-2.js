@@ -3,8 +3,8 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"ws_300x250_ad_2_atlas_P_", frames: [[0,0,300,83],[386,0,106,28],[386,30,111,16],[302,61,166,16],[166,85,12,30],[470,48,31,31],[453,81,31,31],[486,81,23,31],[0,85,111,16],[302,0,82,59],[113,85,51,15],[302,79,149,16]]},
-		{name:"ws_300x250_ad_2_atlas_NP_", frames: [[302,252,300,250],[302,0,300,250],[0,252,300,250],[0,0,300,250],[604,0,300,250]]}
+		{name:"ws_300x250_ad_2_atlas_P_", frames: [[0,0,300,83],[386,0,106,28],[386,30,111,16],[302,61,166,16],[174,85,12,30],[470,48,31,31],[453,81,31,31],[486,81,23,31],[0,85,111,16],[302,0,82,59],[113,85,59,15],[302,79,149,16]]},
+		{name:"ws_300x250_ad_2_atlas_NP_", frames: [[302,252,300,250],[0,0,300,250],[0,252,300,250],[302,0,300,250],[604,0,300,250]]}
 ];
 
 
@@ -538,7 +538,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.Layer_1 = new lib.Symbol_8_Layer_1();
 	this.Layer_1.name = "Layer_1";
 	this.Layer_1.parent = this;
-	this.Layer_1.setTransform(25.5,7.5,1,1,0,0,0,25.5,7.5);
+	this.Layer_1.setTransform(29.5,7.5,1,1,0,0,0,29.5,7.5);
 	this.Layer_1.depth = 0;
 	this.Layer_1.isAttachedToCamera = 0
 	this.Layer_1.isAttachedToMask = 0
@@ -548,7 +548,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 
 	this.timeline.addTween(cjs.Tween.get(this.Layer_1).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Symbol8, new cjs.Rectangle(0,0,51,15), null);
+}).prototype = getMCSymbolPrototype(lib.Symbol8, new cjs.Rectangle(0,0,59,15), null);
 
 
 (lib.Symbol7 = function(mode,startPosition,loop) {
@@ -714,7 +714,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.instance.setTransform(-31.5,229.5,1,1,0,0,0,25.5,7.5);
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(120).to({_off:false},0).wait(1).to({x:-28.4,y:229.75},0).wait(1).to({x:-18.5,y:230.05},0).wait(1).to({x:-2.35,y:230.35},0).wait(1).to({x:16,y:230.6},0).wait(1).to({x:30.95,y:230.9},0).wait(1).to({x:39.75,y:231.2},0).wait(1).to({x:42.5,y:231.5},0).wait(39).to({y:235.85},0).wait(1).to({y:240.25},0).wait(1).to({y:244.6},0).wait(1).to({y:249},0).wait(1).to({y:253.35},0).wait(1).to({y:257.75},0).wait(1).to({y:262.1},0).wait(1).to({y:266.5},0).to({_off:true},1).wait(305));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(120).to({_off:false},0).wait(1).to({regX:29.5,x:-24.4,y:229.75},0).wait(1).to({x:-14.5,y:230.05},0).wait(1).to({x:1.65,y:230.35},0).wait(1).to({x:20,y:230.6},0).wait(1).to({x:34.95,y:230.9},0).wait(1).to({x:43.75,y:231.2},0).wait(1).to({x:46.5,y:231.5},0).wait(1).to({regX:25.5,x:42.5},0).wait(1).to({regX:29.5,x:46.5},0).wait(36).to({regX:25.5,x:42.5},0).wait(1).to({regX:29.5,x:46.5,y:235.85},0).wait(1).to({y:240.25},0).wait(1).to({y:244.6},0).wait(1).to({y:249},0).wait(1).to({y:253.35},0).wait(1).to({y:257.75},0).wait(1).to({y:262.1},0).wait(1).to({y:266.5},0).to({_off:true},1).wait(305));
 
 }).prototype = p = new cjs.MovieClip();
 
@@ -729,20 +729,6 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.instance._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(9).to({_off:false},0).wait(1).to({y:284.35},0).wait(1).to({y:282.6},0).wait(1).to({y:279.8},0).wait(1).to({y:276.05},0).wait(1).to({y:271.5},0).wait(1).to({y:266.35},0).wait(1).to({y:260.8},0).wait(1).to({y:255.05},0).wait(1).to({y:249.25},0).wait(1).to({y:243.6},0).wait(1).to({y:238.2},0).wait(1).to({y:233.2},0).wait(1).to({y:228.65},0).wait(1).to({y:224.65},0).wait(1).to({y:221.25},0).wait(1).to({y:218.45},0).wait(1).to({y:216.25},0).wait(1).to({y:214.7},0).wait(1).to({y:213.8},0).wait(1).to({y:213.5},0).wait(233).to({y:217.2},0).wait(1).to({y:227.25},0).wait(1).to({y:241.05},0).wait(1).to({y:255.7},0).wait(1).to({y:268.75},0).wait(1).to({y:278.55},0).wait(1).to({y:284.5},0).wait(1).to({y:286.5},0).to({_off:true},1).wait(209));
-
-}).prototype = p = new cjs.MovieClip();
-
-
-(lib.Scene_1_Layer_19 = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Layer_19
-	this.instance = new lib.Symbol17();
-	this.instance.parent = this;
-	this.instance.setTransform(239,271,1,1,0,0,0,53,14);
-	this.instance._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(360).to({_off:false},0).wait(1).to({y:268.75},0).wait(1).to({y:262},0).wait(1).to({y:252},0).wait(1).to({y:241.75},0).wait(1).to({y:233.9},0).wait(1).to({y:229.4},0).wait(1).to({y:228},0).wait(112));
 
 }).prototype = p = new cjs.MovieClip();
 
@@ -843,6 +829,20 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.instance._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(78).to({_off:false},0).wait(1).to({x:-60.8},0).wait(1).to({x:-58.6},0).wait(1).to({x:-54.6},0).wait(1).to({x:-48.55},0).wait(1).to({x:-40.15},0).wait(1).to({x:-29.4},0).wait(1).to({x:-16.45},0).wait(1).to({x:-2.05},0).wait(1).to({x:12.7},0).wait(1).to({x:26.6},0).wait(1).to({x:38.8},0).wait(1).to({x:48.9},0).wait(1).to({x:56.9},0).wait(1).to({x:63},0).wait(1).to({x:67.4},0).wait(1).to({x:70.35},0).wait(1).to({x:71.95},0).wait(1).to({x:72.5},0).wait(25).to({y:231.25},0).wait(1).to({y:235.9},0).wait(1).to({y:244.4},0).wait(1).to({y:253.95},0).wait(1).to({y:260.65},0).wait(1).to({y:264.05},0).wait(1).to({y:265},0).to({_off:true},1).wait(351));
+
+}).prototype = p = new cjs.MovieClip();
+
+
+(lib.Scene_1_book_now = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// book_now
+	this.instance = new lib.Symbol17();
+	this.instance.parent = this;
+	this.instance.setTransform(239,271,1,1,0,0,0,53,14);
+	this.instance._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(360).to({_off:false},0).wait(1).to({y:268.75},0).wait(1).to({y:262},0).wait(1).to({y:252},0).wait(1).to({y:241.75},0).wait(1).to({y:233.9},0).wait(1).to({y:229.4},0).wait(1).to({y:228},0).wait(112));
 
 }).prototype = p = new cjs.MovieClip();
 
@@ -1020,7 +1020,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.wifi.layerIndex = 3
 	this.wifi.maskLayerName = 0
 
-	this.timeline.addTween(cjs.Tween.get(this.wifi).wait(121).to({regX:5.5,regY:248,x:5.5,y:248},0).wait(7).to({regX:0,regY:0,x:0,y:0},0).wait(1).to({regX:5.5,regY:248,x:5.5,y:248},0).wait(36).to({regX:0,regY:0,x:0,y:0},0).wait(1).to({regX:5.5,regY:248,x:5.5,y:248},0).wait(8).to({regX:0,regY:0,x:0,y:0},0).wait(305));
+	this.timeline.addTween(cjs.Tween.get(this.wifi).wait(121).to({regX:9.5,regY:248,x:9.5,y:248},0).wait(7).to({regX:0,regY:0,x:0,y:0},0).wait(1).to({regX:9.5,regY:248,x:9.5,y:248},0).wait(36).to({regX:0,regY:0,x:0,y:0},0).wait(1).to({regX:9.5,regY:248,x:9.5,y:248},0).wait(8).to({regX:0,regY:0,x:0,y:0},0).wait(305));
 
 	// comfort_obj_
 	this.comfort = new lib.Scene_1_comfort();
@@ -1100,18 +1100,18 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 
 	this.timeline.addTween(cjs.Tween.get(this.logo).wait(10).to({regX:253,regY:250,x:253,y:250},0).wait(20).to({regX:0,regY:0,x:0,y:0},0).wait(1).to({regX:253,regY:250,x:253,y:250},0).wait(230).to({regX:0,regY:0,x:0,y:0},0).wait(1).to({regX:253,regY:250,x:253,y:250},0).wait(8).to({regX:0,regY:0,x:0,y:0},0).wait(209));
 
-	// Layer_19_obj_
-	this.Layer_19 = new lib.Scene_1_Layer_19();
-	this.Layer_19.name = "Layer_19";
-	this.Layer_19.parent = this;
-	this.Layer_19.depth = 0;
-	this.Layer_19.isAttachedToCamera = 0
-	this.Layer_19.isAttachedToMask = 0
-	this.Layer_19.layerDepth = 0
-	this.Layer_19.layerIndex = 10
-	this.Layer_19.maskLayerName = 0
+	// book_now_obj_
+	this.book_now = new lib.Scene_1_book_now();
+	this.book_now.name = "book_now";
+	this.book_now.parent = this;
+	this.book_now.depth = 0;
+	this.book_now.isAttachedToCamera = 0
+	this.book_now.isAttachedToMask = 0
+	this.book_now.layerDepth = 0
+	this.book_now.layerIndex = 10
+	this.book_now.maskLayerName = 0
 
-	this.timeline.addTween(cjs.Tween.get(this.Layer_19).wait(361).to({regX:239,regY:249.5,x:239,y:249.5},0).wait(7).to({regX:0,regY:0,x:0,y:0},0).wait(1).to({regX:239,regY:249.5,x:239,y:249.5},0).wait(110));
+	this.timeline.addTween(cjs.Tween.get(this.book_now).wait(361).to({regX:239,regY:249.5,x:239,y:249.5},0).wait(7).to({regX:0,regY:0,x:0,y:0},0).wait(1).to({regX:239,regY:249.5,x:239,y:249.5},0).wait(110));
 
 	// banner_obj_
 	this.banner = new lib.Scene_1_banner();
