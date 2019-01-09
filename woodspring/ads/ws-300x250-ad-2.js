@@ -2,7 +2,10 @@
 
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
-lib.ssMetadata = [];
+lib.ssMetadata = [
+		{name:"ws_300x250_ad_2_atlas_P_", frames: [[0,0,300,83],[0,146,106,28],[108,139,111,16],[84,85,166,16],[285,85,12,30],[252,85,31,31],[235,118,31,31],[268,118,23,31],[84,121,111,16],[0,85,82,59],[221,151,59,15],[84,103,149,16]]},
+		{name:"ws_300x250_ad_2_atlas_NP_", frames: [[0,252,300,250],[0,0,300,250],[302,0,300,250],[302,252,300,250],[604,0,300,250]]}
+];
 
 
 // symbols:
@@ -10,105 +13,122 @@ lib.ssMetadata = [];
 
 
 (lib.banner = function() {
-	this.initialize(img.banner);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,300,83);
+	this.initialize(ss["ws_300x250_ad_2_atlas_P_"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.bg1 = function() {
-	this.initialize(img.bg1);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,300,250);
+	this.initialize(ss["ws_300x250_ad_2_atlas_NP_"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.bg2 = function() {
-	this.initialize(img.bg2);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,300,250);
+	this.initialize(ss["ws_300x250_ad_2_atlas_NP_"]);
+	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.bg3 = function() {
-	this.initialize(img.bg3);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,300,250);
+	this.initialize(ss["ws_300x250_ad_2_atlas_NP_"]);
+	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.bg4 = function() {
-	this.initialize(img.bg4);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,300,250);
+	this.initialize(ss["ws_300x250_ad_2_atlas_NP_"]);
+	this.gotoAndStop(3);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.bg5 = function() {
-	this.initialize(img.bg5);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,300,250);
+	this.initialize(ss["ws_300x250_ad_2_atlas_NP_"]);
+	this.gotoAndStop(4);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.booknow = function() {
-	this.initialize(img.booknow);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,106,28);
+	this.initialize(ss["ws_300x250_ad_2_atlas_P_"]);
+	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.comfort = function() {
-	this.initialize(img.comfort);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,111,16);
+	this.initialize(ss["ws_300x250_ad_2_atlas_P_"]);
+	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.conveniences = function() {
-	this.initialize(img.conveniences);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,166,16);
+	this.initialize(ss["ws_300x250_ad_2_atlas_P_"]);
+	this.gotoAndStop(3);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.i = function() {
-	this.initialize(img.i);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,12,30);
+	this.initialize(ss["ws_300x250_ad_2_atlas_P_"]);
+	this.gotoAndStop(4);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.icon1 = function() {
-	this.initialize(img.icon1);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,31,31);
+	this.initialize(ss["ws_300x250_ad_2_atlas_P_"]);
+	this.gotoAndStop(5);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.icon2 = function() {
-	this.initialize(img.icon2);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,31,31);
+	this.initialize(ss["ws_300x250_ad_2_atlas_P_"]);
+	this.gotoAndStop(6);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.icon3 = function() {
-	this.initialize(img.icon3);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,23,31);
+	this.initialize(ss["ws_300x250_ad_2_atlas_P_"]);
+	this.gotoAndStop(7);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.kitchens = function() {
-	this.initialize(img.kitchens);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,111,16);
+	this.initialize(ss["ws_300x250_ad_2_atlas_P_"]);
+	this.gotoAndStop(8);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.logo = function() {
-	this.initialize(img.logo);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,82,59);
+	this.initialize(ss["ws_300x250_ad_2_atlas_P_"]);
+	this.gotoAndStop(9);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.wifi = function() {
-	this.initialize(img.wifi);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,59,15);
+	this.initialize(ss["ws_300x250_ad_2_atlas_P_"]);
+	this.gotoAndStop(10);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.woodspring = function() {
-	this.initialize(img.woodspring);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,149,16);
+	this.initialize(ss["ws_300x250_ad_2_atlas_P_"]);
+	this.gotoAndStop(11);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.Tween43 = function(mode,startPosition,loop) {
@@ -1289,23 +1309,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/banner.png", id:"banner"},
-		{src:"images/bg1.jpg", id:"bg1"},
-		{src:"images/bg2.jpg", id:"bg2"},
-		{src:"images/bg3.jpg", id:"bg3"},
-		{src:"images/bg4.jpg", id:"bg4"},
-		{src:"images/bg5.jpg", id:"bg5"},
-		{src:"images/booknow.png", id:"booknow"},
-		{src:"images/comfort.png", id:"comfort"},
-		{src:"images/conveniences.png", id:"conveniences"},
-		{src:"images/i.png", id:"i"},
-		{src:"images/icon1.png", id:"icon1"},
-		{src:"images/icon2.png", id:"icon2"},
-		{src:"images/icon3.png", id:"icon3"},
-		{src:"images/kitchens.png", id:"kitchens"},
-		{src:"images/logo.png", id:"logo"},
-		{src:"images/wifi.png", id:"wifi"},
-		{src:"images/woodspring.png", id:"woodspring"}
+		{src:"images/ws_300x250_ad_2_atlas_P_.png", id:"ws_300x250_ad_2_atlas_P_"},
+		{src:"images/ws_300x250_ad_2_atlas_NP_.jpg", id:"ws_300x250_ad_2_atlas_NP_"}
 	],
 	preloads: []
 };
