@@ -4,7 +4,7 @@ var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
 		{name:"ws_300x600_ad_1_atlas_P_", frames: [[0,0,300,211],[350,358,117,31],[216,334,132,107],[350,334,171,22],[302,0,238,123],[277,229,218,103],[302,125,249,102],[0,298,214,104],[0,213,275,83],[350,391,164,16]]},
-		{name:"ws_300x600_ad_1_atlas_NP_", frames: [[0,0,300,443],[604,0,300,443],[302,445,300,442],[302,0,300,443],[0,445,300,443]]}
+		{name:"ws_300x600_ad_1_atlas_NP_", frames: [[604,0,300,443],[302,0,300,443],[302,445,300,442],[0,445,300,443],[0,0,300,443]]}
 ];
 
 
@@ -615,7 +615,7 @@ p.nominalBounds = new cjs.Rectangle(-66,-53.5,132,107);
 	this.instance_1._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(30).to({_off:false},0).to({_off:true,y:52},29,cjs.Ease.quadInOut).wait(841));
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(30).to({_off:false},29,cjs.Ease.quadInOut).wait(454).to({startPosition:0},0).to({x:399.5},32,cjs.Ease.quadInOut).wait(355));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(30).to({_off:false},29,cjs.Ease.quadInOut).wait(454).to({startPosition:0},0).to({x:399.5},32,cjs.Ease.quadInOut).to({_off:true},34).wait(321));
 
 }).prototype = p = new cjs.MovieClip();
 

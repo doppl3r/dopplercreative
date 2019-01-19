@@ -4,7 +4,7 @@ var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
 		{name:"ws_160x600_ad_1_atlas_P_", frames: [[162,264,117,31],[324,263,132,107],[0,0,160,261],[162,297,90,37],[162,0,157,144],[0,263,160,144],[321,0,149,144],[162,146,160,116],[162,371,86,37],[324,146,159,115],[162,336,100,33]]},
-		{name:"ws_160x600_ad_1_atlas_NP_", frames: [[162,0,160,350],[324,0,160,350],[0,0,160,350]]},
+		{name:"ws_160x600_ad_1_atlas_NP_", frames: [[0,0,160,350],[324,0,160,350],[162,0,160,350]]},
 		{name:"ws_160x600_ad_1_atlas_NP_2", frames: [[162,0,160,350],[0,0,160,350]]}
 ];
 
@@ -35,15 +35,15 @@ lib.ssMetadata = [
 
 
 (lib.bg4 = function() {
-	this.initialize(ss["ws_160x600_ad_1_atlas_NP_"]);
-	this.gotoAndStop(2);
+	this.initialize(ss["ws_160x600_ad_1_atlas_NP_2"]);
+	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.bg5 = function() {
-	this.initialize(ss["ws_160x600_ad_1_atlas_NP_2"]);
-	this.gotoAndStop(1);
+	this.initialize(ss["ws_160x600_ad_1_atlas_NP_"]);
+	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
