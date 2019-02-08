@@ -2,7 +2,7 @@
 <html lang="en" amp="">
 	<head>
 		<meta charset="utf-8">
-        <title>Freelance Web Development and Design Group</title>
+        <title>Web Development and Design</title>
         <meta name="description" content="Doppler Creative - crafting websites, logos, and other digital products for you.">
         <meta name="keywords" content="Development, Design, HTML, CSS, JavaScript, freelance, websites, apps, prototypes, games, logos, graphics, animations, videos, music">
         <meta name="author" content="Jacob DeBenedetto">
@@ -19,12 +19,12 @@
                 "@context": "http://schema.org",
                 "@type": "CreativeWork",
                 "mainEntityOfPage": "https://dopplercreative.com/index.html",
-                "headline": "Web development and Design Freelance Group",
+                "headline": "Web development and Design",
                 "datePublished": "2014-04-01",
                 "dateModified": "2018-03-10",
                 "description": "View recent projects, clients, and testimonies.",
                 "author": {
-                    "@type": "Person",
+                    "@type": "Company",
                     "name": "Doppler Creative"
                 },
                 "publisher": {
@@ -51,8 +51,8 @@
             section .material-icons { font-size: 48px; padding: 36px 12px; vertical-align: middle; }
             section:after,
             section:before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
-            section:before { background-color: #1290bf; z-index: -2; }
-            section:after { background-image: url(''); background-size: cover; background-blend-mode: multiply; background-color: #1290bf; background-position: center; opacity: 0.25; z-index: -1; }
+            section:before { background-color: #000; z-index: -2; }
+            section:after { background-image: url(''); background-size: cover; background-color: #000; background-position: center; opacity: 0.25; z-index: -1; }
             article { display: table-cell; vertical-align: middle; }
             hgroup { margin-left: auto; margin-right: auto; width: auto; max-width: 1280px; }
             h1 { font-family: 'GothamHTF-Black'; font-size: 64px; margin: 0; text-transform: lowercase; }
@@ -64,14 +64,14 @@
             form button { font-size: 18px; margin: 24px 0 0; width: 100%; }
             amp-img { outline: none; }
             amp-image-lightbox { background-color: rgba(0,0,0,0.25); }
-            amp-image-lightbox:after { background-color: #333333; border-radius: 999px; color: #f2f2f2; content: 'x'; cursor: pointer; font-family: 'Arial'; font-size: 24px; height: 36px; line-height: 36px; position: absolute; right: 5%; top: 5%; width: 64px; }
-            .style-one { background-color: transparent; color: #f2f2f2; }
-            .style-one a { background-color: #f2f2f2; color: #1290bf; }
-            .style-two { background-color: #f2f2f2; color: #1290bf; }
+            amp-image-lightbox:after { background-color: #333333; border-radius: 999px; color: #fff; content: 'x'; cursor: pointer; font-family: 'Arial'; font-size: 24px; height: 36px; line-height: 36px; position: absolute; right: 5%; top: 5%; width: 64px; }
+            .style-one { background-color: transparent; color: #fff; }
+            .style-one a { background-color: #fff; color: #000; }
+            .style-two { background-color: #fff; color: #000; }
             .style-two a.button, .style-two a.button:hover,
-            .style-two button, .style-two button:hover { background-color: #1290bf; color: #f2f2f2; }
-            .style-three { background-color: #8ec23c; color: #f2f2f2; }
-            .style-four { background-color: #f2f2f2; color: #dd464c; }
+            .style-two button, .style-two button:hover { background-color: #1290bf; color: #fff; }
+            .style-three { background-color: #8ec23c; color: #fff; }
+            .style-four { background-color: #fff; color: #dd464c; }
             .background-one:after { background-image: url('img/jeshoots-com-655112-unsplash.jpg'); }
             .background-two:after { background-image: url('img/abbie-bernet-527251-unsplash.jpg'); }
             .background-three:after { background-image: url('img/breather-163395-unsplash.jpg'); }
@@ -80,12 +80,12 @@
             .one-third { display: inline-block; margin: 24px 1% 0; width: 30%; vertical-align: top; }
             .one-third .material-icons { font-size: 24px; padding: 0; }
             .profile { padding: 24px 0; }
-            .profile amp-img { border: 12px solid #ffffff; border-radius: 50%; background-color: #ffffff; box-sizing: border-box; filter: grayscale(100%); }
+            .profile amp-img { border-radius: 50%; background-color: #ffffff; box-sizing: border-box; filter: grayscale(100%); }
             .profile .name { display: block; }
             .profile .name a { background-color: transparent; color: inherit; font-size: inherit; padding: 0; }
             .profile .title { display: block; font-size: 16px; font-style: italic; }
             .thumbnails { margin-top: 48px; }
-            .thumbnails div { background-color: #ffffff; border-radius: 3px; box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05); box-sizing: border-box; display: inline-block; margin: 12px; width: 20%; padding: 12px; }
+            .thumbnails div { background-color: #ffffff; border-radius: 3px; box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05); box-sizing: border-box; display: inline-block; margin: 12px; width: 20%; }
             .thumbnails div .desc { display: none; }
             .thumbnails img { display: block; height: auto; max-width: 100%; cursor: pointer; }
             .bottom-arrow { position: absolute; bottom: 0; left: 0; right: 0; cursor: default; }
@@ -94,7 +94,7 @@
             .material-icons.large { font-size: 32px; }
             .move-up-down { animation: move-up-down 1s ease-in-out infinite alternate; position: absolute; left: 0; bottom: 0; }
             .status { font-size: 16px; line-height: 16px; position: relative; display: inline-block; margin: 32px 0 0 20px; vertical-align: middle; font-style: italic; }
-            .status:before { content: ''; width: 12px; height: 12px; left: -20px; top: 2px; position: absolute; background-color: #f2f2f2; border-radius: 50%; animation: fade-in 1s ease-in-out infinite alternate; }
+            .status:before { content: ''; width: 12px; height: 12px; left: -20px; top: 2px; position: absolute; background-color: #fff; border-radius: 50%; animation: fade-in 1s ease-in-out infinite alternate; }
 
             @media (max-width: 800px) {
                 p > a, p > a:hover { display: block; margin-top: 16px; }
@@ -121,19 +121,18 @@
             <article>
                 <hgroup>
                     <h1 id="my-name">Doppler Creative<br></h1>
-                    <p>design & development freelance group</p>
-                    <a id="learn-btn" href="#learn" class="button"><i class="material-icons">layers</i> view services</a><br>
+                    <p>design & development</p>
+                    <a id="learn-btn" href="#learn" class="button"><i class="material-icons">layers</i> view portfolio</a><br>
                     <p class="status">scottsdale, az</p>
                     <!-- <i class="material-icons bottom-arrow desktop">keyboard_arrow_down</i> -->
                 </hgroup>
             </article>
         </section>
-
         <section class="fullscreen style-two" id="learn">
             <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
             <article>
                 <hgroup>
-                    <h1>services</h1>
+                    <h1>portfolio</h1>
                     <p>We <em>design & develop</em> wordpress websites, custom websites, mobile apps, prototypes, games, logos, illustrations, animations, videos, and music.</p>
                     <div class="thumbnails">
                         <div><amp-img on="tap:lightbox" role="button" tabindex="0" src="img/1.jpg" layout="responsive" width="800"  height="600"></amp-img></div>
@@ -153,37 +152,14 @@
                         <div><amp-img on="tap:lightbox" role="button" tabindex="0" src="img/15.jpg" layout="responsive" width="800"  height="600"></amp-img></div>
                         <div><amp-img on="tap:lightbox" role="button" tabindex="0" src="img/16.jpg" layout="responsive" width="800"  height="600"></amp-img></div>
                     </div>
+                    <p>more coming soon...</p>
                 </hgroup>
             </article>
         </section>
-
-        <section class="fullscreen style-one background-three" id="team">
-            <article>
-                <hgroup>
-                    <h1>members</h1>
-                    <p class="one-third profile">
-                        <amp-img src="img/jacob.jpg" width="192px" height="192px"></amp-img>
-                        <span class="name"><a href="https://www.linkedin.com/in/debenedetto" target="_blank">Jacob DeBenedetto</a></span>
-                        <span class="title">Developer/Designer</span>
-                    </p>
-                    <p class="one-third profile">
-                        <amp-img src="img/isaiah.jpg" width="192px" height="192px"></amp-img>
-                        <span class="name"><a href="https://github.com/isaiahdebenedetto" target="_blank">Isaiah DeBenedetto</a></span>
-                        <span class="title">Developer</span>
-                    </p>
-                    <p class="one-third profile">
-                        <amp-img src="img/elijah.jpg" width="192px" height="192px"></amp-img>
-                        <span class="name"><a href="https://dribbble.com/elijahdeben" target="_blank">Elijah DeBenedetto</a></span>
-                        <span class="title">Designer</span>
-                    </p>
-                </hgroup>
-            </article>
-        </section>
-
         <section class="fullscreen style-two" id="projects">
             <article>
                 <hgroup>
-                    <h1>work</h1>
+                    <h1>collaboration</h1>
                     <p class="one-third">
                         <a target="_blank" href="https://www.coldstonecreamery.com/">Cold Stone Creamery</a><br>
                         <a target="_blank" href="http://www.pinkberry.com/">Pinkberry</a><br>
@@ -232,7 +208,28 @@
                 </hgroup>
             </article>
         </section>
-
+        <section class="fullscreen style-two" id="team">
+            <article>
+                <hgroup>
+                    <h1>our team</h1>
+                    <p class="one-third profile">
+                        <amp-img src="img/jacob.jpg" width="192px" height="192px"></amp-img>
+                        <span class="name"><a href="https://www.linkedin.com/in/debenedetto" target="_blank">Jacob</a></span>
+                        <span class="title">Development/Design</span>
+                    </p>
+                    <p class="one-third profile">
+                        <amp-img src="img/isaiah.jpg" width="192px" height="192px"></amp-img>
+                        <span class="name"><a href="https://github.com/isaiahdebenedetto" target="_blank">Isaiah</a></span>
+                        <span class="title">Development</span>
+                    </p>
+                    <p class="one-third profile">
+                        <amp-img src="img/elijah.jpg" width="192px" height="192px"></amp-img>
+                        <span class="name"><a href="https://dribbble.com/elijahdeben" target="_blank">Elijah</a></span>
+                        <span class="title">Design</span>
+                    </p>
+                </hgroup>
+            </article>
+        </section>
         <section class="fullscreen style-one background-two">
             <article>
                 <hgroup>
@@ -242,7 +239,6 @@
                 </hgroup>
             </article>
         </section>
-        
         <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-N4LQD3J&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
 	</body>
 </html>
