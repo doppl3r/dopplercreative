@@ -47,7 +47,7 @@
             /* CSS Global */
             html { animation: fade-in 1s ease-in-out; background-color: #f1f1f1; }
             body { text-align: center; }
-            section { box-sizing: border-box; display: table; height: calc(100vh); min-height: 480px; overflow-x: hidden; padding: 64px 5%; position: relative; width: 100%; }
+            section { box-sizing: border-box; display: table; height: calc(75vh); min-height: 480px; overflow-x: hidden; padding: 64px 5%; position: relative; width: 100%; }
             section .material-icons { font-size: 48px; padding: 36px 12px; vertical-align: middle; }
             section:after,
             section:before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
@@ -57,7 +57,7 @@
             hgroup { margin-left: auto; margin-right: auto; width: auto; max-width: 1280px; }
             h1 { font-family: 'GothamHTF-Black'; font-size: 64px; margin: 0; text-transform: lowercase; }
             p, p > a, p > a:hover { color: inherit; font-family: 'GothamHTF-Light'; font-size: 21px; line-height: 28px; margin: 0 auto; max-width: 780px; padding: 0; }
-            a, a:hover, button { border: none; cursor: pointer; display: inline-block; font-family: 'GothamHTF-Light'; font-size: 24px; margin: 5% 0 0; outline: none; padding: 16px 32px; text-decoration: none; }
+            a, a:hover, button { border: none; cursor: pointer; display: inline-block; font-family: 'GothamHTF-Light'; font-size: 24px; margin: 5% 0 0; outline: none; padding: 12px 24px; text-decoration: none; }
             a .material-icons, a:hover .material-icons, button .material-icons { padding: 0; font-size: 36px; }
             form { max-width: 480px; margin: 0 auto 48px; }
             form input { border: none; box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05); box-sizing: border-box; font-family: 'GothamHTF-Light'; font-size: 18px; margin: 24px 0 0; outline: none; padding: 24px; width: 100%; }
@@ -72,7 +72,7 @@
             .style-two button, .style-two button:hover { background-color: #1290bf; color: #fff; }
             .style-three { background-color: #8ec23c; color: #fff; }
             .style-four { background-color: #fff; color: #dd464c; }
-            .background-one:after { background-image: url('img/jeshoots-com-655112-unsplash.jpg'); }
+            .background-one:after { background-image: url('img/jakob-owens-231036-unsplash.jpg'); }
             .background-two:after { background-image: url('img/abbie-bernet-527251-unsplash.jpg'); }
             .background-three:after { background-image: url('img/breather-163395-unsplash.jpg'); }
             .one-half { display: inline-block; margin: 24px 2.5% 0; width: 30%; vertical-align: top; }
@@ -99,10 +99,9 @@
             @media (max-width: 800px) {
                 p > a, p > a:hover { display: block; margin-top: 16px; }
                 p > a + br { display: none; }
-                a, a:hover { font-size: 24px; margin-top: 48px; padding: 16px 24px; }
+                a, a:hover { margin-top: 48px; }
                 h1 { font-size: 36px; }
-                section { min-height: initial; height: 50vh; }
-                section:last-of-type { height: 100vh; }
+                section { min-height: initial; }
                 .one-half { width: 100%; margin: 0 0 24px; }
                 .one-third { width: 100%; margin: 0 0 24px; }
                 .thumbnails div, .thumbnails div:hover { width: 45%; margin: 6px; } 
@@ -122,17 +121,15 @@
                 <hgroup>
                     <h1 id="my-name">Doppler Creative<br></h1>
                     <p>design & development</p>
-                    <a id="learn-btn" href="#learn" class="button"><i class="material-icons">layers</i> view portfolio</a><br>
                     <p class="status">scottsdale, az</p>
-                    <!-- <i class="material-icons bottom-arrow desktop">keyboard_arrow_down</i> -->
                 </hgroup>
             </article>
         </section>
-        <section class="fullscreen style-two" id="learn">
+        <section class="fullscreen style-two" id="work">
             <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
             <article>
                 <hgroup>
-                    <h1>portfolio</h1>
+                    <h1>our work</h1>
                     <p>We <em>design & develop</em> wordpress websites, custom websites, mobile apps, prototypes, games, logos, illustrations, animations, videos, and music.</p>
                     <div class="thumbnails">
                         <div><amp-img on="tap:lightbox" role="button" tabindex="0" src="img/1.jpg" layout="responsive" width="800"  height="600"></amp-img></div>
