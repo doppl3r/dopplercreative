@@ -93,8 +93,8 @@
             .mobile { visibility: hidden; }
             .material-icons.large { font-size: 32px; }
             .move-up-down { animation: move-up-down 1s ease-in-out infinite alternate; position: absolute; left: 0; bottom: 0; }
-            .status { font-size: 16px; line-height: 16px; position: relative; display: inline-block; margin: 32px 0 0 20px; vertical-align: middle; font-style: italic; }
-            .status:before { content: ''; width: 12px; height: 12px; left: -20px; top: 2px; position: absolute; background-color: #fff; border-radius: 50%; animation: fade-in 1s ease-in-out infinite alternate; }
+            .status { font-size: 16px; line-height: 16px; position: relative; display: inline-block; margin: 32px 0; vertical-align: middle; font-style: italic; }
+            .status i { padding: 4px; font-size: 24px; animation: fade-in 1s ease-in-out infinite alternate; }
 
             @media (max-width: 800px) {
                 p > a, p > a:hover { display: block; margin-top: 16px; }
@@ -121,7 +121,7 @@
                 <hgroup>
                     <h1 id="my-name">Doppler Creative<br></h1>
                     <p>design & development</p>
-                    <p class="status">Powered by Google AMP</p>
+                    <p class="status"><i class="material-icons">offline_bolt</i>Powered by Google AMP</p>
                 </hgroup>
             </article>
         </section>
@@ -231,7 +231,6 @@
             <article>
                 <hgroup>
                     <h1>contact us</h1>
-                    <p>We would love to hear more about your next big project! Email us today for a free quote.</p>
                     <a id="email-btn" href="mailto:jacob@dopplercreative.com@gmail.com" class="button"><i class="material-icons">email</i> email</a>
                 </hgroup>
             </article>
