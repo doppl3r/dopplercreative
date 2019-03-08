@@ -85,16 +85,16 @@
             .profile .name { display: block; }
             .profile .name a { background-color: transparent; color: inherit; font-size: inherit; padding: 0; }
             .profile .title { display: block; font-size: 16px; font-style: italic; }
-            #carousel { margin: 48px auto 0; position: relative; max-width: 800px; }
-            #carousel .amp-carousel-button { border-radius: 0; background-color: #000; cursor: pointer; }
-            #carousel .amp-carousel-button-next { right: 0; }
-            #carousel .amp-carousel-button-prev { left: 0; }
-            #carousel .slide-item { position: relative; }
-            #carousel #caption-toggle { top: 0; right: 0; position: absolute; line-height: 32px; height: 32px; width: 32px; text-align: center; color: #fff; background-color: #000; padding: 0; margin: 0; user-select: none; animation: 1s ease-in-out throb infinite alternate; }
-            #carousel #caption-toggle.active, #carousel #caption-toggle.inactive { animation: initial; }
-            #carousel.enable-caption .caption { display: block; /* use amp-bind to enable caption */ }
-            #carousel .caption {  top: 0; left: 0; right: 0; display: none; position: absolute; background-color: #000; color: #fff; font-family: 'GothamHTF-Light'; font-size: 12px; line-height: 32px; padding: 0 32px; }
-            #carousel .caption a { display: inline; padding: 0; margin: 0; text-decoration: underline; font-size: inherit; color: inherit; }
+            #carousel-container { margin: 48px auto 0; position: relative; max-width: 800px; }
+            #carousel-container .amp-carousel-button { border-radius: 0; background-color: #000; cursor: pointer; }
+            #carousel-container .amp-carousel-button-next { right: 0; }
+            #carousel-container .amp-carousel-button-prev { left: 0; }
+            #carousel-container .slide-item { position: relative; }
+            #carousel-container #caption-toggle { bottom: 0; right: 0; position: absolute; line-height: 32px; height: 32px; width: 32px; text-align: center; color: #fff; background-color: #000; padding: 0; margin: 0; user-select: none; animation: 1s ease-in-out throb infinite alternate; }
+            #carousel-container #caption-toggle.active, #carousel-container #caption-toggle.inactive { animation: initial; }
+            #carousel-container.enable-caption .caption { display: block; /* use amp-bind to enable caption */ }
+            #carousel-container .caption {  bottom: 0; left: 0; right: 0; display: none; position: absolute; background-color: #000; color: #fff; font-family: 'GothamHTF-Light'; font-size: 12px; line-height: 32px; padding: 0 32px; }
+            #carousel-container .caption a { display: inline; padding: 0; margin: 0; text-decoration: underline; font-size: inherit; color: inherit; }
             .thumbnails { margin-top: 48px; }
             .thumbnails div { background-color: #ffffff; box-sizing: border-box; display: inline-block; margin: 12px; width: 20%; }
             .thumbnails div .desc { display: none; }
@@ -143,8 +143,8 @@
                 <hgroup>
                     <h1>our work</h1>
                     <p>We <em>design & develop</em> wordpress websites, custom websites, ADA, mobile apps, prototypes, games, logos, illustrations, animations, videos, and music.</p>
-                    <div id="carousel" [class]="toggleCaption ? 'enable-caption' : ''">
-                        <amp-carousel width="800" height="600" layout="responsive" type="slides" autoplay="" controls="">
+                    <div id="carousel-container" [class]="toggleCaption ? 'enable-caption' : ''">
+                        <amp-carousel id="carousel" width="800" height="600" layout="responsive" type="slides" autoplay="" controls="">
                             <div class="slide-item">
                                 <amp-img src="img/1.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
                                 <div class="caption">We updated the Cold Stone Creamery website to be WCAG 2.0 (AA) ADA compliant and made the desktop view fully mobile responsive.</div>
@@ -210,7 +210,7 @@
                                 <div class="caption">HeartJournal app concept.</div>
                             </div>    
                         </amp-carousel>
-                        <a id="caption-toggle" [class]="toggleCaption ? 'active' : 'inactive'" [text]="toggleCaption ? 'x' : '?'" on="tap:AMP.setState({ toggleCaption: !toggleCaption })" tabindex="0">?</a>
+                        <a id="caption-toggle" [class]="toggleCaption ? 'active' : 'inactive'" [text]="toggleCaption ? 'x' : '?'" on="tap:AMP.setState({ toggleCaption: !toggleCaption }), carousel.toggleAutoplay(toggleOn=false)" tabindex="0">?</a>
                     </div>
                 </hgroup>
             </article>
