@@ -93,7 +93,9 @@
             #carousel-container #caption-toggle { bottom: 0; right: 0; position: absolute; line-height: 32px; height: 32px; width: 32px; text-align: center; color: #fff; background-color: #000; padding: 0; margin: 0; user-select: none; animation: 1s ease-in-out throb infinite alternate; }
             #carousel-container #caption-toggle.active, #carousel-container #caption-toggle.inactive { animation: initial; }
             #carousel-container.enable-caption .caption { display: block; /* use amp-bind to enable caption */ }
-            #carousel-container .caption {  bottom: 0; left: 0; right: 0; display: none; position: absolute; background-color: rgba(0, 0, 0, 0.5); color: #fff; font-family: 'GothamHTF-Light'; font-size: 16px; padding: 32px; word-break: break-word; }
+            #carousel-container amp-img { cursor: pointer; }
+            #carousel-container.enable-caption amp-img { cursor: default; }
+            #carousel-container .caption { bottom: 0; left: 0; right: 0; display: none; position: absolute; background-color: rgba(0, 0, 0, 0.5); color: #fff; font-family: 'GothamHTF-Light'; font-size: 16px; padding: 32px; word-break: break-word; }
             #carousel-container .caption a { display: inline; padding: 0; margin: 0; text-decoration: underline; font-size: inherit; color: inherit; }
             .thumbnails { margin-top: 48px; }
             .thumbnails div { background-color: #ffffff; box-sizing: border-box; display: inline-block; margin: 12px; width: 20%; }
@@ -146,67 +148,67 @@
                     <div id="carousel-container" [class]="toggleCaption ? 'enable-caption' : ''">
                         <amp-carousel id="carousel" width="800" height="600" layout="responsive" type="slides" autoplay="" controls="">
                             <div class="slide-item">
-                                <amp-img src="img/1.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/1.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">We updated the Cold Stone Creamery website to be WCAG 2.0 (AA) ADA compliant and made the desktop view fully mobile responsive.</div>
                             </div>    
                             <div class="slide-item">
-                                <amp-img src="img/2.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/2.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">We updated the Blimpie website to be WCAG 2.0 (AA) ADA compliant.</div>
                             </div>    
                             <div class="slide-item">
-                                <amp-img src="img/3.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/3.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">We updated the Rancho One website to be WCAG 2.0 (AA) ADA compliant and made the desktop view fully mobile responsive.</div>
                             </div>    
                             <div class="slide-item">
-                                <amp-img src="img/4.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/4.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">We developed The Counter website using Google AMP with WCAG 2.0 (AA) ADA rules included.</div>
                             </div>    
                             <div class="slide-item">
-                                <amp-img src="img/5.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/5.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">We designed the TouchWood Films app and website. Link: <a href="https://www.touchwoodfilms.com" target="_blank">https://www.touchwoodfilms.com</a></div>
                             </div>    
                             <div class="slide-item">
-                                <amp-img src="img/6.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/6.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">We designed the TouchWood Films app and website. Link: <a href="https://www.touchwoodfilms.com" target="_blank">https://www.touchwoodfilms.com</a></div>
                             </div>    
                             <div class="slide-item">
-                                <amp-img src="img/7.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/7.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">We designed and developed the Harvest Bible Church website with WordPress. Link: <a href="https://harvestbiblechurch.com" target="_blank">https://harvestbiblechurch.com</a></div>
                             </div>    
                             <div class="slide-item">
-                                <amp-img src="img/8.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/8.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">We designed and developed the Varitec Solutions website. Link: <a href="https://varitecsolutions.com" target="_blank">https://varitecsolutions.com</a></div>
                             </div>    
                             <div class="slide-item">
-                                <amp-img src="img/9.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/9.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">Logo design for Kyleast.</div>
                             </div>    
                             <div class="slide-item">
-                                <amp-img src="img/10.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/10.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">Logo design for MyBit cryptocurrency</div>
                             </div>    
                             <div class="slide-item">
-                                <amp-img src="img/11.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/11.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">Graphic posters.</div>
                             </div>    
                             <div class="slide-item">
-                                <amp-img src="img/12.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/12.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">Soul Care business cards.</div>
                             </div>    
                             <div class="slide-item">
-                                <amp-img src="img/13.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/13.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">Pizza app concept.</div>
                             </div>    
                             <div class="slide-item">
-                                <amp-img src="img/14.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/14.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">We designed and developed Boxel Rebound for Android and Google Web Store. <a href="https://chrome.google.com/webstore/detail/boxel-rebound/iginnfkhmmfhlkagcmpgofnjhanpmklb/reviews?hl=en-US" target="_blank">Play now!</a></div>
                             </div>    
                             <div class="slide-item">
-                                <amp-img src="img/15.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/15.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">Gutcheck app concept.</div>
                             </div>    
                             <div class="slide-item">
-                                <amp-img src="img/16.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <amp-img src="img/16.jpg" width="800" height="600" layout="responsive" alt="" on="tap:AMP.setState({ toggleCaption: true }), carousel.toggleAutoplay(toggleOn=false)"></amp-img>
                                 <div class="caption">HeartJournal app concept.</div>
                             </div>    
                         </amp-carousel>
