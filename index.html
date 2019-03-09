@@ -55,9 +55,14 @@
             h1 { font-family: 'GothamHTF-Black'; font-size: 64px; margin: 0; text-transform: lowercase; }
             p { color: inherit; font-family: 'GothamHTF-Light'; font-size: 21px; line-height: 28px; margin: 0 auto; max-width: 780px; padding: 0; }
             a { color: inherit; font-family: 'GothamHTF-Light'; font-size: 21px; line-height: 28px; text-decoration: none; text-decoration: none; }
-            section { background-color: #fff; color: #000; display: flex; align-items: center; justify-content: stretch; overflow-x: hidden; padding: 64px; position: relative; width: 100%; }
+            section { background-color: #fff; color: #000; display: flex; align-items: center; justify-content: stretch; overflow-x: hidden; padding: 96px 12px; position: relative; width: 100%; }
             section.fullscreen { min-height: 75vh; }
-            #team { max-width: 992px; margin: auto; }
+            #team { max-width: 1024px; margin: auto; }
+            #team .row { justify-content: center; }
+            #logos { background-color: #f1f1f1; }
+            #logos .row { max-width: 1024px; margin: auto; }
+            #logos amp-img { filter: grayscale(100%); opacity: 0.75; }
+            #logos amp-img:hover { filter: grayscale(0%); opacity: 1; }
             .row { width: 100%; }
             .button { background-color: #000; color: #fff; border: none; cursor: pointer; display: inline-block; font-family: 'GothamHTF-Light'; font-size: 24px; margin: 5% 0 0; outline: none; padding: 12px 24px; text-decoration: none; }
             .button:hover { background-color: #fff; color: #000; }
@@ -70,9 +75,10 @@
             .white-text .button { background-color: #fff; color: #000; }
             .white-text .button:hover { background-color: #000; color: #fff; }
             .background-one:after { background-image: url('img/jakob-owens-231036-unsplash.jpg'); }
-            .background-two:after { background-image: url('img/abbie-bernet-527251-unsplash.jpg'); }
-            .profile { padding: 24px; display: block; }
+            .background-two:after { background-image: url('img/denisse-leon-368446-unsplash.jpg'); }
+            .profile { padding: 24px 12px; display: block; }
             .profile amp-img { background-color: #ffffff; filter: grayscale(100%); max-width: 256px; margin: auto; }
+            .profile amp-img:hover { filter: grayscale(0%); }
             .profile .name { display: block; word-break: break-word; margin-top: 12px; }
             .profile .title { display: block; font-size: 16px; font-style: italic; word-break: break-word; }
             #carousel-container { margin: 48px auto 0; position: relative; max-width: 800px; }
@@ -83,7 +89,7 @@
             #carousel-container #caption-toggle { bottom: 0; right: 0; position: absolute; cursor: pointer; line-height: 32px; height: 32px; width: 32px; text-align: center; color: #fff; background-color: #000; padding: 0; margin: 0; user-select: none; animation: 1s ease-in-out throb infinite alternate; }
             #carousel-container #caption-toggle.active, #carousel-container #caption-toggle.inactive { animation: initial; }
             #carousel-container.enable-caption .caption { display: block; /* use amp-bind to enable caption */ }
-            #carousel-container .caption {  bottom: 0; left: 0; right: 0; display: none; position: absolute; background-color: #fff; color: #000; box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1); font-family: 'GothamHTF-Light'; font-size: 12px; padding: 32px; word-break: break-word; }
+            #carousel-container .caption {  bottom: 0; left: 0; right: 0; display: none; position: absolute; background-color: #fff; color: #000; box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1); font-family: 'GothamHTF-Light'; font-size: 16px; padding: 32px; word-break: break-word; }
             #carousel-container .caption a { display: inline; padding: 0; margin: 0; text-decoration: underline; font-size: inherit; color: inherit; }
             .status { font-size: 16px; line-height: 16px; position: relative; display: inline-block; margin: 32px 0; vertical-align: middle; font-style: italic; }
             .status i { padding: 4px; font-size: 24px; animation: fade-in 1s ease-in-out infinite alternate; }
@@ -91,6 +97,7 @@
             @media (max-width: 800px) {
                 h1 { font-size: 36px; }
                 section { min-height: initial; }
+                #carousel-container .caption { font-size: 12px; }
             }
 
             @font-face { font-family: 'GothamHTF-Black'; src: url("fonts/GothamHTF-Black.eot"); src: url("fonts/GothamHTF-Black.eot?#iefix") format("embedded-opentype"), url("fonts/GothamHTF-Black.woff") format("woff"), url("fonts/GothamHTF-Black.ttf") format("truetype"), url("fonts/GothamHTF-Black.svg") format("svg"); }
@@ -195,28 +202,55 @@
         </section>
         <section id="logos">
             <div class="row">
+                <div class="col-3 col-6-m"><a href="https://www.coldstonecreamery.com" target="_blank"><amp-img src="img/logos-assets/logo-coldstone.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-3 col-6-m"><a href="http://www.pinkberry.com" target="_blank"><amp-img src="img/logos-assets/logo-pinkberry.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-3 col-6-m"><a href="https://www.blimpie.com" target="_blank"><amp-img src="img/logos-assets/logo-blimpie.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-3 col-6-m"><a href="https://www.thecounter.com" target="_blank"><amp-img src="img/logos-assets/logo-thecounter.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-3 col-6-m"><a href="https://www.bajafresh.com" target="_blank"><amp-img src="img/logos-assets/logo-bajafresh.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-3 col-6-m"><a href="https://www.lasalsa.com" target="_blank"><amp-img src="img/logos-assets/logo-lasalsa.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-3 col-6-m"><a href="https://www.choicehotels.com" target="_blank"><amp-img src="img/logos-assets/logo-choice-hotels.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-3 col-6-m"><a href="https://www.karismahotels.com" target="_blank"><amp-img src="img/logos-assets/logo-karisma-hotels.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-3 col-6-m"><a href="http://bonappetitgroup.com" target="_blank"><amp-img src="img/logos-assets/logo-bonappetitgroup.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-3 col-6-m"><a href="https://www.woodspring.com/" target="_blank"><amp-img src="img/logos-assets/logo-woodspring.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-3 col-6-m"><a href="https://www.pinkadventuretours.com" target="_blank"><amp-img src="img/logos-assets/logo-pinkjeep.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-3 col-6-m"><a href="https://www.sabreairlinesolutions.com" target="_blank"><amp-img src="img/logos-assets/logo-sabre.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-3 col-6-m"><a href="https://www.climatec.com" target="_blank"><amp-img src="img/logos-assets/logo-climatec.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-3 col-6-m"><a href="http://creativeleather.com" target="_blank"><amp-img src="img/logos-assets/logo-creative-leather.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-3 col-6-m"><a href="https://redeemerrbc.com" target="_blank"><amp-img src="img/logos-assets/logo-redeemerrbc.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-3 col-6-m"><a href="https://harvestbiblechurch.com" target="_blank"><amp-img src="img/logos-assets/logo-harvestbc.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+            </div>
+        </section>
+        <section id="team">
+            <div class="row">
                 <div class="col-12">
                     <h1>our team</h1>
                 </div>
-                <div class="col-4">
+                <div class="col-3 col-6-m">
                     <a class="profile" href="https://www.linkedin.com/in/debenedetto" target="_blank">
                         <amp-img src="img/jacob.jpg" width="192px" height="192px" layout="responsive"></amp-img>
                         <span class="name">Jacob</span>
                         <span class="title">Development/Design</span>
                     </a>
                 </div>
-                <div class="col-4">
+                <div class="col-3 col-6-m">
                     <a class="profile" href="https://dribbble.com/elijahdeben" target="_blank">
                         <amp-img src="img/elijah.jpg" width="192px" height="192px" layout="responsive"></amp-img>
                         <span class="name">Elijah</span>
                         <span class="title">Design</span>
                     </a>
                 </div>
-                <div class="col-4">
+                <div class="col-3 col-6-m">
                     <a class="profile" href="https://github.com/isaiahdebenedetto" target="_blank">
                         <amp-img src="img/isaiah.jpg" width="192px" height="192px" layout="responsive"></amp-img>
                         <span class="name">Isaiah</span>
                         <span class="title">Development</span>
+                    </a>
+                </div>
+                <div class="col-3 col-6-m">
+                    <a class="profile" href="https://www.linkedin.com/in/ben-debenedetto-31947777/" target="_blank">
+                        <amp-img src="img/ben.jpg" width="192px" height="192px" layout="responsive"></amp-img>
+                        <span class="name">Ben</span>
+                        <span class="title">Marketing</span>
                     </a>
                 </div>
             </div>
@@ -225,6 +259,7 @@
             <div class="row">
                 <div class="col">
                     <h1>contact us</h1>
+                    <p>Ask us anything!</p>
                     <a class="button" id="email-btn" href="mailto:jacob@dopplercreative.com@gmail.com"><i class="material-icons">email</i> email</a>
                 </div>
             </div>
