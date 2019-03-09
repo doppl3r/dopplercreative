@@ -45,84 +45,56 @@
             /* CSS Normalizer */
             html { line-height: 1.15; -webkit-text-size-adjust: 100%; } body { margin: 0; } h1 { font-size: 2em; margin: 0.67em 0; } hr { box-sizing: content-box; height: 0; overflow: visible; } pre { font-family: monospace, monospace; font-size: 1em; } a { background-color: transparent; } abbr[title] { border-bottom: none; text-decoration: underline; text-decoration: underline dotted; } b, strong { font-weight: bolder; } code, kbd, samp { font-family: monospace, monospace; font-size: 1em; } small { font-size: 80%; } sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; } sub { bottom: -0.25em; } sup { top: -0.5em; } img { border-style: none; } button, input, optgroup, select, textarea { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0; } button, input { overflow: visible; } button, select { text-transform: none; } button, [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; } button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner { border-style: none; padding: 0; } button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring { outline: 1px dotted ButtonText; } fieldset { padding: 0.35em 0.75em 0.625em; } legend { box-sizing: border-box; color: inherit; display: table; max-width: 100%; padding: 0; white-space: normal; } progress { vertical-align: baseline; } textarea { overflow: auto; } [type="checkbox"], [type="radio"] { box-sizing: border-box; padding: 0; } [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button { height: auto; } [type="search"] { -webkit-appearance: textfield; outline-offset: -2px; } [type="search"]::-webkit-search-decoration { -webkit-appearance: none; } ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; } details { display: block; } summary { display: list-item; } template { display: none; } [hidden] { display: none; }
             
+            /* CSS Grid System - https://github.com/doppl3r/grix */
+            .row{display:flex;flex-wrap:wrap}.row>[class*="col-"]{box-sizing:border-box;padding:0 12px;flex-grow:0}.row>.col{box-sizing:border-box;-ms-flex-preferred-size:0;-ms-flex-positive:1;flex:1 0 0;padding:0 12px;width:100%}.row>.col-1-m{width:8.3334%}.row>.col-2-m{width:16.6667%}.row>.col-3-m{width:25%}.row>.col-4-m{width:33.3334%}.row>.col-5-m{width:41.6667%}.row>.col-6-m{width:50%}.row>.col-7-m{width:58.3334%}.row>.col-8-m{width:66.6667%}.row>.col-9-m{width:75%}.row>.col-10-m{width:83.3334%}.row>.col-11-m{width:91.6667%}.row>.col-12-m{width:100%}.row>.col-1{width:8.3334%}.row>.col-2{width:16.6667%}.row>.col-3{width:25%}.row>.col-4{width:33.3334%}.row>.col-5{width:41.6667%}.row>.col-6{width:50%}.row>.col-7{width:58.3334%}.row>.col-8{width:66.6667%}.row>.col-9{width:75%}.row>.col-10{width:83.3334%}.row>.col-11{width:91.6667%}.row>.col-12{width:100%}@media (max-width: 768px){.row>[class*="col-"].col-1-m{width:8.3334%}.row>[class*="col-"].col-2-m{width:16.6667%}.row>[class*="col-"].col-3-m{width:25%}.row>[class*="col-"].col-4-m{width:33.3334%}.row>[class*="col-"].col-5-m{width:41.6667%}.row>[class*="col-"].col-6-m{width:50%}.row>[class*="col-"].col-7-m{width:58.3334%}.row>[class*="col-"].col-8-m{width:66.6667%}.row>[class*="col-"].col-9-m{width:75%}.row>[class*="col-"].col-10-m{width:83.3334%}.row>[class*="col-"].col-11-m{width:91.6667%}.row>[class*="col-"].col-12-m{width:100%}.row>.col-1{width:100%}.row>.col-2{width:100%}.row>.col-3{width:100%}.row>.col-4{width:100%}.row>.col-5{width:100%}.row>.col-6{width:100%}.row>.col-7{width:100%}.row>.col-8{width:100%}.row>.col-9{width:100%}.row>.col-10{width:100%}.row>.col-11{width:100%}.row>.col-12{width:100%}}
+
             /* CSS Global */
-            html { animation: fade-in 1s ease-in-out; background-color: #f1f1f1; }
-            body { text-align: center; }
-            section { box-sizing: border-box; display: table; height: calc(75vh); min-height: 480px; overflow-x: hidden; padding: 64px 5%; position: relative; width: 100%; }
-            section .material-icons { font-size: 48px; padding: 36px 12px; vertical-align: middle; }
-            section:after,
-            section:before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
-            section:before { background-color: #000; z-index: -2; }
-            section:after { background-image: url(''); background-size: cover; background-color: #000; background-position: center; opacity: 0.25; z-index: -1; }
-            article { display: table-cell; vertical-align: middle; }
-            hgroup { margin-left: auto; margin-right: auto; width: auto; max-width: 1280px; }
+            * { box-sizing: border-box; }
+            html { animation: fade-in 1s ease-in-out; background-color: #fff; }
+            body { text-align: center; font-family: 'GothamHTF-Light'; }
             h1 { font-family: 'GothamHTF-Black'; font-size: 64px; margin: 0; text-transform: lowercase; }
-            p, p > a, p > a:hover { color: inherit; font-family: 'GothamHTF-Light'; font-size: 21px; line-height: 28px; margin: 0 auto; max-width: 780px; padding: 0; }
-            a, a:hover, button { border: none; cursor: pointer; display: inline-block; font-family: 'GothamHTF-Light'; font-size: 24px; margin: 5% 0 0; outline: none; padding: 12px 24px; text-decoration: none; }
-            a .material-icons, a:hover .material-icons, button .material-icons { padding: 0; font-size: 36px; }
-            form { max-width: 480px; margin: 0 auto 48px; }
-            form input { border: none; box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05); box-sizing: border-box; font-family: 'GothamHTF-Light'; font-size: 18px; margin: 24px 0 0; outline: none; padding: 24px; width: 100%; }
-            form button { font-size: 18px; margin: 24px 0 0; width: 100%; }
-            amp-img { outline: none; }
-            amp-image-lightbox { background-color: rgba(0,0,0,0.25); }
-            amp-image-lightbox:after { background-color: #000; color: #fff; content: 'x'; cursor: pointer; font-family: 'Arial'; font-size: 24px; height: 36px; line-height: 36px; position: absolute; right: 5%; top: 5%; width: 64px; }
-            .style-one { background-color: transparent; color: #fff; }
-            .style-one a { background-color: #fff; color: #000; }
-            .style-two { background-color: #fff; color: #000; }
-            .style-two a.button, .style-two a.button:hover,
-            .style-two button, .style-two button:hover { background-color: #1290bf; color: #fff; }
-            .style-three { background-color: #8ec23c; color: #fff; }
-            .style-four { background-color: #fff; color: #dd464c; }
+            p { color: inherit; font-family: 'GothamHTF-Light'; font-size: 21px; line-height: 28px; margin: 0 auto; max-width: 780px; padding: 0; }
+            a { color: inherit; font-family: 'GothamHTF-Light'; font-size: 21px; line-height: 28px; text-decoration: none; text-decoration: none; }
+            section { background-color: #fff; color: #000; display: flex; align-items: center; justify-content: stretch; overflow-x: hidden; padding: 64px; position: relative; width: 100%; }
+            section.fullscreen { min-height: 75vh; }
+            #team { max-width: 992px; margin: auto; }
+            .row { width: 100%; }
+            .button { background-color: #000; color: #fff; border: none; cursor: pointer; display: inline-block; font-family: 'GothamHTF-Light'; font-size: 24px; margin: 5% 0 0; outline: none; padding: 12px 24px; text-decoration: none; }
+            .button:hover { background-color: #fff; color: #000; }
+            .button .material-icons, .button:hover .material-icons { padding: 0; font-size: 36px; }
+            .material-icons { font-size: 48px; padding: 36px 12px; vertical-align: middle; }
+            .white-text { background-color: transparent; color: #fff; }
+            .white-text:before { background-color: #000; z-index: -2; }
+            .white-text:after { background-image: url(''); background-size: cover; background-color: #000; background-position: center; opacity: 0.25; z-index: -1; }
+            .white-text:after, .white-text:before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
+            .white-text .button { background-color: #fff; color: #000; }
+            .white-text .button:hover { background-color: #000; color: #fff; }
             .background-one:after { background-image: url('img/jakob-owens-231036-unsplash.jpg'); }
             .background-two:after { background-image: url('img/abbie-bernet-527251-unsplash.jpg'); }
-            .background-three:after { background-image: url('img/breather-163395-unsplash.jpg'); }
-            .one-half { display: inline-block; margin: 24px 2.5% 0; width: 30%; vertical-align: top; }
-            .one-half .material-icons { font-size: 24px; padding: 0; }
-            .one-third { display: inline-block; margin: 24px 1% 0; width: 30%; vertical-align: top; }
-            .one-third .material-icons { font-size: 24px; padding: 0; }
-            .profile { padding: 24px 0; }
-            .profile amp-img { background-color: #ffffff; box-sizing: border-box; filter: grayscale(100%); }
-            .profile .name { display: block; }
-            .profile .name a { background-color: transparent; color: inherit; font-size: inherit; padding: 0; }
-            .profile .title { display: block; font-size: 16px; font-style: italic; }
+            .profile { padding: 24px; display: block; }
+            .profile amp-img { background-color: #ffffff; filter: grayscale(100%); max-width: 256px; margin: auto; }
+            .profile .name { display: block; word-break: break-word; margin-top: 12px; }
+            .profile .title { display: block; font-size: 16px; font-style: italic; word-break: break-word; }
             #carousel-container { margin: 48px auto 0; position: relative; max-width: 800px; }
             #carousel-container .amp-carousel-button { border-radius: 0; background-color: #000; cursor: pointer; }
             #carousel-container .amp-carousel-button-next { right: 0; }
             #carousel-container .amp-carousel-button-prev { left: 0; }
             #carousel-container .slide-item { position: relative; }
-            #carousel-container #caption-toggle { bottom: 0; right: 0; position: absolute; line-height: 32px; height: 32px; width: 32px; text-align: center; color: #fff; background-color: #000; padding: 0; margin: 0; user-select: none; animation: 1s ease-in-out throb infinite alternate; }
+            #carousel-container #caption-toggle { bottom: 0; right: 0; position: absolute; cursor: pointer; line-height: 32px; height: 32px; width: 32px; text-align: center; color: #fff; background-color: #000; padding: 0; margin: 0; user-select: none; animation: 1s ease-in-out throb infinite alternate; }
             #carousel-container #caption-toggle.active, #carousel-container #caption-toggle.inactive { animation: initial; }
             #carousel-container.enable-caption .caption { display: block; /* use amp-bind to enable caption */ }
             #carousel-container .caption {  bottom: 0; left: 0; right: 0; display: none; position: absolute; background-color: #fff; color: #000; box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1); font-family: 'GothamHTF-Light'; font-size: 12px; padding: 32px; word-break: break-word; }
             #carousel-container .caption a { display: inline; padding: 0; margin: 0; text-decoration: underline; font-size: inherit; color: inherit; }
-            .thumbnails { margin-top: 48px; }
-            .thumbnails div { background-color: #ffffff; box-sizing: border-box; display: inline-block; margin: 12px; width: 20%; }
-            .thumbnails div .desc { display: none; }
-            .thumbnails img { display: block; height: auto; max-width: 100%; cursor: pointer; /* filter: grayscale(100%) contrast(125%); */ }
-            .bottom-arrow { position: absolute; bottom: 0; left: 0; right: 0; cursor: default; }
-            .desktop { visibility: visible; }
-            .mobile { visibility: hidden; }
-            .material-icons.large { font-size: 32px; }
-            .move-up-down { animation: move-up-down 1s ease-in-out infinite alternate; position: absolute; left: 0; bottom: 0; }
             .status { font-size: 16px; line-height: 16px; position: relative; display: inline-block; margin: 32px 0; vertical-align: middle; font-style: italic; }
             .status i { padding: 4px; font-size: 24px; animation: fade-in 1s ease-in-out infinite alternate; }
 
             @media (max-width: 800px) {
-                p > a, p > a:hover { display: block; margin-top: 16px; }
-                p > a + br { display: none; }
-                a, a:hover { margin-top: 48px; }
                 h1 { font-size: 36px; }
                 section { min-height: initial; }
-                .one-half { width: 100%; margin: 0 0 24px; }
-                .one-third { width: 100%; margin: 0 0 24px; }
-                .thumbnails div, .thumbnails div:hover { width: 45%; margin: 6px; } 
-                .desktop { visibility: hidden; }
-                .mobile { visibility: visible; }
             }
 
             @font-face { font-family: 'GothamHTF-Black'; src: url("fonts/GothamHTF-Black.eot"); src: url("fonts/GothamHTF-Black.eot?#iefix") format("embedded-opentype"), url("fonts/GothamHTF-Black.woff") format("woff"), url("fonts/GothamHTF-Black.ttf") format("truetype"), url("fonts/GothamHTF-Black.svg") format("svg"); }
             @font-face { font-family: 'GothamHTF-Light'; src: url("fonts/GothamHTF-Light.eot"); src: url("fonts/GothamHTF-Light.eot?#iefix") format("embedded-opentype"), url("fonts/GothamHTF-Light.woff") format("woff"), url("fonts/GothamHTF-Light.ttf") format("truetype"), url("fonts/GothamHTF-Light.svg") format("svg"); }
-            @keyframes move-up-down { 0% { bottom: 0.25em; opacity: 0.25; } 100% { bottom: 0; opacity: 1; } }
             @keyframes throb { 0% { transform: scale(1); } 50% { transform: scale(1.25); } 100% { transform: scale(1); } }
             @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
         </style>
@@ -135,19 +107,18 @@
         </script>
     </head>
 	<body>
-        <section class="fullscreen style-one background-one">
-            <article>
-                <hgroup>
+        <section class="fullscreen white-text background-one" id="header">
+            <div class="row">
+                <div class="col">
                     <h1 id="my-name">Doppler Creative<br></h1>
                     <p>design & development</p>
                     <p class="status"><i class="material-icons">offline_bolt</i>Powered by Google AMP</p>
-                </hgroup>
-            </article>
+                </div>
+            </div>
         </section>
-        <section class="fullscreen style-two" id="work">
-            <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
-            <article>
-                <hgroup>
+        <section id="work">
+            <div class="row">
+                <div class="col">
                     <h1>our work</h1>
                     <p>We <em>design & develop</em> wordpress websites, custom websites, ADA, mobile apps, prototypes, games, logos, illustrations, animations, videos, and music.</p>
                     <div id="carousel-container" [class]="toggleCaption ? 'enable-caption' : ''">
@@ -219,90 +190,44 @@
                         </amp-carousel>
                         <a id="caption-toggle" [class]="toggleCaption ? 'active' : 'inactive'" [text]="toggleCaption ? 'x' : '?'" on="tap:AMP.setState({ toggleCaption: !toggleCaption }), carousel.toggleAutoplay(toggleOn=false)" tabindex="0">?</a>
                     </div>
-                </hgroup>
-            </article>
+                </div>
+            </div>
         </section>
-        <section class="fullscreen style-two" id="projects">
-            <article>
-                <hgroup>
-                    <h1>collaborations</h1>
-                    <p class="one-third">
-                        <a target="_blank" href="https://www.coldstonecreamery.com/">Cold Stone Creamery</a><br>
-                        <a target="_blank" href="http://www.pinkberry.com/">Pinkberry</a><br>
-                        <a target="_blank" href="https://www.blimpie.com/">Blimpie</a><br>
-                        <a target="_blank" href="https://www.lasalsa.com/">La Salsa</a><br>
-                        <a target="_blank" href="https://www.thecounter.com/">The Counter</a><br>
-                        <a target="_blank" href="https://www.sabreairlinesolutions.com">Sabre Airline</a><br>
-                        <a target="_blank" href="http://shangrilaok.com/">Shangri-La Resort</a><br>
-                        <a target="_blank" href="http://www.varitecsolutions.com/">Varitec Solutions</a><br>
-                        <a target="_blank" href="http://www.climatec.com/">Climatec</a><br>
-                        <a target="_blank" href="https://www.srpmic-nsn.gov/">SRPMIC</a><br>
-                        <a target="_blank" href="http://www.nswcsd.com/">NSWC</a><br>
-                        <a target="_blank" href="https://mybit.io/">MyBit</a><br>
-                        <a target="_blank" href="http://cbri.com/">CBRI</a><br>
-                    </p>
-                    <p class="one-third">
-                        <a target="_blank" href="https://www.choicehotels.com/">Choice Hotels</a><br>
-                        <a target="_blank" href="http://www.myerhospitality.com/">Myer Hotels</a><br>
-                        <a target="_blank" href="https://www.cafealfresco.com/">Cafe Alfresco</a><br>
-                        <a target="_blank" href="http://bonappetitgroup.com/">Bon Appetit Group</a><br>
-                        <a target="_blank" href="https://www.breakthrubev.com/Arizona">Alliance Beverage</a><br>
-                        <a target="_blank" href="http://creativeleather.com/">Creative Leather</a><br>
-                        <a target="_blank" href="https://www.woodspring.com/">Woodspring</a><br>
-                        <a target="_blank" href="http://bluesquaremfg.com/">BlueSquare</a><br>
-                        <a target="_blank" href="http://www.1paramount.com/">Paramount</a><br>
-                        <a target="_blank" href="http://www.piranhafitnessstudio.com/">Piranha Fitness</a><br>
-                        <a target="_blank" href="http://www.harvestbiblechurch.com/">Harvest Bible Church</a><br>
-                        <a target="_blank" href="http://www.capstonecos.com/">Capstone Homes</a><br>
-                        <a target="_blank" href="https://gonotes.com/">GoNotes</a><br>
-                    </p>
-                    <p class="one-third">
-                        <a target="_blank" href="https://www.pinkjeeptours.com/">Pink Jeep Tours</a><br>
-                        <a target="_blank" href="https://www.madisonone.com/">Madison One</a><br>
-                        <a target="_blank" href="http://handapharma.com/">Handa Pharma</a><br>
-                        <a target="_blank" href="http://maguireandfish.com/">Maguire & Fish</a><br>
-                        <a target="_blank" href="http://www.mbkgroupinc.com/">MBK Group</a><br>
-                        <a target="_blank" href="https://www.smartbrainsolutions.com/">NTL Group</a><br>
-                        <a target="_blank" href="https://pipelineworldwide.org/">Pipeline</a><br>
-                        <a target="_blank" href="http://www.pebbletec.com/">Pebble Tec</a><br>
-                        <a target="_blank" href="https://www.tnh.life/partners/">True North</a><br>
-                        <a target="_blank" href="http://www.villagiotile.com/">Villagio</a><br>
-                        <a target="_blank" href="https://www.saviorhospice.com/">Savior Hospice</a><br>
-                        <a target="_blank" href="http://www.protossoft.com/">Protos Software</a><br>
-                        <a target="_blank" href="http://www.papagocrossfit.com/">Papago Crossfit</a><br>
-                    </p>
-                </hgroup>
-            </article>
-        </section>
-        <section class="fullscreen style-two" id="team">
-            <article>
-                <hgroup>
+        <section id="logos">
+            <div class="row">
+                <div class="col-12">
                     <h1>our team</h1>
-                    <p class="one-third profile">
-                        <amp-img src="img/jacob.jpg" width="192px" height="192px"></amp-img>
-                        <span class="name"><a href="https://www.linkedin.com/in/debenedetto" target="_blank">Jacob</a></span>
+                </div>
+                <div class="col-4">
+                    <a class="profile" href="https://www.linkedin.com/in/debenedetto" target="_blank">
+                        <amp-img src="img/jacob.jpg" width="192px" height="192px" layout="responsive"></amp-img>
+                        <span class="name">Jacob</span>
                         <span class="title">Development/Design</span>
-                    </p>
-                    <p class="one-third profile">
-                        <amp-img src="img/elijah.jpg" width="192px" height="192px"></amp-img>
-                        <span class="name"><a href="https://dribbble.com/elijahdeben" target="_blank">Elijah</a></span>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a class="profile" href="https://dribbble.com/elijahdeben" target="_blank">
+                        <amp-img src="img/elijah.jpg" width="192px" height="192px" layout="responsive"></amp-img>
+                        <span class="name">Elijah</span>
                         <span class="title">Design</span>
-                    </p>
-                    <p class="one-third profile">
-                        <amp-img src="img/isaiah.jpg" width="192px" height="192px"></amp-img>
-                        <span class="name"><a href="https://github.com/isaiahdebenedetto" target="_blank">Isaiah</a></span>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a class="profile" href="https://github.com/isaiahdebenedetto" target="_blank">
+                        <amp-img src="img/isaiah.jpg" width="192px" height="192px" layout="responsive"></amp-img>
+                        <span class="name">Isaiah</span>
                         <span class="title">Development</span>
-                    </p>
-                </hgroup>
-            </article>
+                    </a>
+                </div>
+            </div>
         </section>
-        <section class="fullscreen style-one background-two">
-            <article>
-                <hgroup>
+        <section class="fullscreen white-text background-two">
+            <div class="row">
+                <div class="col">
                     <h1>contact us</h1>
-                    <a id="email-btn" href="mailto:jacob@dopplercreative.com@gmail.com" class="button"><i class="material-icons">email</i> email</a>
-                </hgroup>
-            </article>
+                    <a class="button" id="email-btn" href="mailto:jacob@dopplercreative.com@gmail.com"><i class="material-icons">email</i> email</a>
+                </div>
+            </div>
         </section>
         <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-N4LQD3J&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
 	</body>
