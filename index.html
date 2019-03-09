@@ -50,11 +50,11 @@
 
             /* CSS Global */
             * { box-sizing: border-box; }
-            html { animation: fade-in 1s ease-in-out; background-color: #fff; }
+            html { animation: fade-in 1s ease-in-out; background-color: #fff; color: #000; }
             body { text-align: center; font-family: 'GothamHTF-Light'; }
             h1 { font-family: 'GothamHTF-Black'; font-size: 64px; margin: 0; text-transform: lowercase; }
-            p { color: inherit; font-family: 'GothamHTF-Light'; font-size: 21px; line-height: 28px; margin: 0 auto; max-width: 780px; padding: 0; }
-            a { color: inherit; font-family: 'GothamHTF-Light'; font-size: 21px; line-height: 28px; text-decoration: none; text-decoration: none; }
+            p { font-size: 21px; line-height: 28px; margin: 0 auto; max-width: 780px; padding: 0; word-break: break-word; }
+            a { color: inherit; text-decoration: none; }
             section { background-color: #fff; color: #000; display: flex; align-items: center; justify-content: stretch; overflow-x: hidden; padding: 96px 12px; position: relative; width: 100%; }
             section.fullscreen { min-height: 75vh; }
             #team { max-width: 1024px; margin: auto; }
@@ -64,7 +64,7 @@
             #logos amp-img { filter: grayscale(100%); opacity: 0.75; }
             #logos amp-img:hover { filter: grayscale(0%); opacity: 1; }
             .row { width: 100%; }
-            .button { background-color: #000; color: #fff; border: none; cursor: pointer; display: inline-block; font-family: 'GothamHTF-Light'; font-size: 24px; margin: 5% 0 0; outline: none; padding: 12px 24px; text-decoration: none; }
+            .button { background-color: #000; color: #fff; border: none; cursor: pointer; display: inline-block; font-size: 24px; margin: 5% 0 0; outline: none; padding: 12px 24px; text-decoration: none; }
             .button:hover { background-color: #fff; color: #000; }
             .button .material-icons, .button:hover .material-icons { padding: 0; font-size: 36px; }
             .material-icons { font-size: 48px; padding: 36px 12px; vertical-align: middle; }
@@ -79,8 +79,8 @@
             .profile { padding: 24px 12px; display: block; }
             .profile amp-img { background-color: #ffffff; filter: grayscale(100%); max-width: 256px; margin: auto; }
             .profile amp-img:hover { filter: grayscale(0%); }
-            .profile .name { display: block; word-break: break-word; margin-top: 12px; }
-            .profile .title { display: block; font-size: 16px; font-style: italic; word-break: break-word; }
+            .profile .name { font-family: 'GothamHTF-Black'; margin-top: 12px; }
+            .profile .title { font-style: italic; word-break: break-word; }
             #carousel-container { margin: 48px auto 0; position: relative; max-width: 800px; }
             #carousel-container .amp-carousel-button { border-radius: 0; background-color: #000; cursor: pointer; }
             #carousel-container .amp-carousel-button-next { right: 0; }
@@ -89,13 +89,14 @@
             #carousel-container #caption-toggle { bottom: 0; right: 0; position: absolute; cursor: pointer; line-height: 32px; height: 32px; width: 32px; text-align: center; color: #fff; background-color: #000; padding: 0; margin: 0; user-select: none; animation: 1s ease-in-out throb infinite alternate; }
             #carousel-container #caption-toggle.active, #carousel-container #caption-toggle.inactive { animation: initial; }
             #carousel-container.enable-caption .caption { display: block; /* use amp-bind to enable caption */ }
-            #carousel-container .caption {  bottom: 0; left: 0; right: 0; display: none; position: absolute; background-color: #fff; color: #000; box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1); font-family: 'GothamHTF-Light'; font-size: 16px; padding: 32px; word-break: break-word; }
+            #carousel-container .caption {  bottom: 0; left: 0; right: 0; display: none; position: absolute; background-color: #fff; color: #000; box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1); font-size: 16px; padding: 32px; word-break: break-word; }
             #carousel-container .caption a { display: inline; padding: 0; margin: 0; text-decoration: underline; font-size: inherit; color: inherit; }
             .status { font-size: 16px; line-height: 16px; position: relative; display: inline-block; margin: 32px 0; vertical-align: middle; font-style: italic; }
             .status i { padding: 4px; font-size: 24px; animation: fade-in 1s ease-in-out infinite alternate; }
 
             @media (max-width: 800px) {
                 h1 { font-size: 36px; }
+                p { font-size: 16px; line-height: 20px; }
                 section { min-height: initial; }
                 #carousel-container .caption { font-size: 12px; }
             }
@@ -228,29 +229,29 @@
                 <div class="col-3 col-6-m">
                     <a class="profile" href="https://www.linkedin.com/in/debenedetto" target="_blank">
                         <amp-img src="img/jacob.jpg" width="192px" height="192px" layout="responsive"></amp-img>
-                        <span class="name">Jacob</span>
-                        <span class="title">Development/Design</span>
+                        <p class="name">Jacob</p>
+                        <p class="title">Development & Design</p>
                     </a>
                 </div>
                 <div class="col-3 col-6-m">
                     <a class="profile" href="https://dribbble.com/elijahdeben" target="_blank">
                         <amp-img src="img/elijah.jpg" width="192px" height="192px" layout="responsive"></amp-img>
-                        <span class="name">Elijah</span>
-                        <span class="title">Design</span>
+                        <p class="name">Elijah</p>
+                        <p class="title">Design</p>
                     </a>
                 </div>
                 <div class="col-3 col-6-m">
                     <a class="profile" href="https://github.com/isaiahdebenedetto" target="_blank">
                         <amp-img src="img/isaiah.jpg" width="192px" height="192px" layout="responsive"></amp-img>
-                        <span class="name">Isaiah</span>
-                        <span class="title">Development</span>
+                        <p class="name">Isaiah</p>
+                        <p class="title">Development</p>
                     </a>
                 </div>
                 <div class="col-3 col-6-m">
                     <a class="profile" href="https://www.linkedin.com/in/ben-debenedetto-31947777/" target="_blank">
                         <amp-img src="img/ben.jpg" width="192px" height="192px" layout="responsive"></amp-img>
-                        <span class="name">Ben</span>
-                        <span class="title">Marketing</span>
+                        <p class="name">Ben</p>
+                        <p class="title">Marketing</p>
                     </a>
                 </div>
             </div>
