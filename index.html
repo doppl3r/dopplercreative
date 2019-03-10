@@ -94,25 +94,22 @@
             .status { font-size: 16px; line-height: 16px; position: relative; display: inline-block; margin: 32px 0; vertical-align: middle; font-style: italic; }
             .status i { padding: 4px; font-size: 24px; animation: fade-in 1s ease-in-out infinite alternate; }
 
-            @media (max-width: 800px) {
+            /* Mobile responsive query */
+            @media (max-width: 768px) {
                 h1 { font-size: 36px; }
                 p { font-size: 16px; line-height: 20px; }
                 section { min-height: initial; }
                 #carousel-container .caption { font-size: 12px; }
             }
 
+            /* Fonts */
             @font-face { font-family: 'GothamHTF-Black'; src: url("fonts/GothamHTF-Black.eot"); src: url("fonts/GothamHTF-Black.eot?#iefix") format("embedded-opentype"), url("fonts/GothamHTF-Black.woff") format("woff"), url("fonts/GothamHTF-Black.ttf") format("truetype"), url("fonts/GothamHTF-Black.svg") format("svg"); }
             @font-face { font-family: 'GothamHTF-Light'; src: url("fonts/GothamHTF-Light.eot"); src: url("fonts/GothamHTF-Light.eot?#iefix") format("embedded-opentype"), url("fonts/GothamHTF-Light.woff") format("woff"), url("fonts/GothamHTF-Light.ttf") format("truetype"), url("fonts/GothamHTF-Light.svg") format("svg"); }
+            
+            /* Animations */
             @keyframes throb { 0% { transform: scale(1); } 50% { transform: scale(1.25); } 100% { transform: scale(1); } }
             @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
         </style>
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-6147503287869901",
-            enable_page_level_ads: true
-          });
-        </script>
     </head>
 	<body>
         <section class="fullscreen white-text background-one" id="header">
