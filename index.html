@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
         <title>Web Development and Design</title>
-        <meta name="description" content="Doppler Creative - crafting websites, logos, and other digital products for you.">
+        <meta name="description" content="Doppler Creative - Software & print solutions including websites, apps, games, logos, business cards, and many other products customized for you.">
         <meta name="keywords" content="Web Development, Design, HTML, CSS, JavaScript, freelance, websites, apps, prototypes, games, logos, graphics, animations, videos, music">
         <meta name="author" content="Jacob DeBenedetto">
         <meta name="viewport" content="width=device-width, minimum-scale=1">
@@ -20,7 +20,7 @@
                 "@context": "http://schema.org",
                 "@type": "CreativeWork",
                 "mainEntityOfPage": "https://dopplercreative.com/index.html",
-                "headline": "Web development and Design",
+                "headline": "Software & Print Solutions",
                 "datePublished": "2014-04-01",
                 "dateModified": "2018-03-10",
                 "description": "View recent projects, clients, and testimonies.",
@@ -68,6 +68,8 @@
             .button:hover { background-color: #fff; color: #000; }
             .button .material-icons, .button:hover .material-icons { padding: 0; font-size: 36px; }
             .material-icons { font-size: 48px; padding: 36px 12px; vertical-align: middle; }
+            .status { font-size: 16px; line-height: 16px; position: relative; display: inline-block; margin: 64px 0; vertical-align: middle; font-style: italic; }
+            .status i { padding: 4px; font-size: 24px; animation: fade-in 1s ease-in-out infinite alternate; }
             .white-text { background-color: transparent; color: #fff; }
             .white-text:before { background-color: #000; z-index: -2; }
             .white-text:after { background-image: url(''); background-size: cover; background-color: #000; background-position: center; opacity: 0.25; z-index: -1; }
@@ -91,8 +93,6 @@
             #carousel-container.enable-caption .caption { display: block; /* use amp-bind to enable caption */ }
             #carousel-container .caption {  bottom: 0; left: 0; right: 0; display: none; position: absolute; background-color: #fff; color: #000; box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1); font-size: 16px; padding: 32px; word-break: break-word; }
             #carousel-container .caption a { display: inline; padding: 0; margin: 0; text-decoration: underline; font-size: inherit; color: inherit; }
-            .status { font-size: 16px; line-height: 16px; position: relative; display: inline-block; margin: 32px 0; vertical-align: middle; font-style: italic; }
-            .status i { padding: 4px; font-size: 24px; animation: fade-in 1s ease-in-out infinite alternate; }
 
             /* Mobile responsive query */
             @media (max-width: 768px) {
@@ -116,8 +116,8 @@
             <div class="row">
                 <div class="col">
                     <h1 id="my-name">Doppler Creative<br></h1>
-                    <p>design & development</p>
-                    <p class="status"><i class="material-icons">offline_bolt</i>Powered by Google AMP</p>
+                    <p>software & print solutions</p>
+                    <p class="status"><i class="material-icons">offline_bolt</i>Google AMP Certified</p>
                 </div>
             </div>
         </section>
@@ -128,10 +128,6 @@
                     <p>We <em>design & develop</em> wordpress websites, custom websites, ADA, mobile apps, prototypes, games, logos, illustrations, animations, videos, and music.</p>
                     <div id="carousel-container" [class]="toggleCaption ? 'enable-caption' : ''">
                         <amp-carousel id="carousel" width="800" height="600" layout="responsive" type="slides" autoplay="" controls="">
-                            <div class="slide-item">
-                                <amp-img src="img/14.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">We designed and developed Boxel Rebound for Android and Google Web Store. <a href="https://chrome.google.com/webstore/detail/boxel-rebound/iginnfkhmmfhlkagcmpgofnjhanpmklb/reviews?hl=en-US" target="_blank">Play now!</a></div>
-                            </div>
                             <div class="slide-item">
                                 <amp-img src="img/1.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
                                 <div class="caption">We rebuilt the Cold Stone Creamery website to be WCAG 2.0 (AA) ADA compliant and made the desktop view fully mobile responsive.</div>
@@ -147,6 +143,10 @@
                             <div class="slide-item">
                                 <amp-img src="img/4.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
                                 <div class="caption">We developed The Counter website using Google AMP with WCAG 2.0 (AA) ADA rules included.</div>
+                            </div>
+                            <div class="slide-item">
+                                <amp-img src="img/14.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <div class="caption">We designed and developed Boxel Rebound for Android and Google Web Store. <a href="https://chrome.google.com/webstore/detail/boxel-rebound/iginnfkhmmfhlkagcmpgofnjhanpmklb/reviews?hl=en-US" target="_blank">Play now!</a></div>
                             </div>
                             <div class="slide-item">
                                 <amp-img src="img/5.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
