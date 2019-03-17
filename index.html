@@ -15,6 +15,7 @@
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <script async="" custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
         <script async="" custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+        <script async="" custom-element="amp-vimeo" src="https://cdn.ampproject.org/v0/amp-vimeo-0.1.js"></script>
         <script type="application/ld+json">
             {
                 "@context": "http://schema.org",
@@ -87,8 +88,9 @@
             #carousel-container .amp-carousel-button { border-radius: 0; background-color: #000; cursor: pointer; }
             #carousel-container .amp-carousel-button-next { right: 0; }
             #carousel-container .amp-carousel-button-prev { left: 0; }
-            #carousel-container .slide-item { position: relative; }
-            #carousel-container #caption-toggle { bottom: 0; right: 0; position: absolute; cursor: pointer; line-height: 32px; height: 32px; width: 32px; text-align: center; color: #fff; background-color: #000; padding: 0; margin: 0; user-select: none; animation: 1s ease-in-out throb infinite alternate; }
+            #carousel-container .slide-item { position: relative; background-color: #f1f1f1; }
+            #carousel-container .slide-item.black { background-color: #000; }
+            #carousel-container #caption-toggle { bottom: 0; right: 0; position: absolute; cursor: pointer; line-height: 32px; height: 32px; width: 32px; text-align: center; color: #fff; background-color: #000; padding: 0; margin: 0; user-select: none; /* animation: 1s ease-in-out throb infinite alternate; */ }
             #carousel-container #caption-toggle.active, #carousel-container #caption-toggle.inactive { animation: initial; }
             #carousel-container.enable-caption .caption { display: block; /* use amp-bind to enable caption */ }
             #carousel-container .caption {  bottom: 0; left: 0; right: 0; display: none; position: absolute; background-color: #fff; color: #000; box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1); font-size: 16px; padding: 32px; word-break: break-word; }
@@ -127,7 +129,7 @@
                     <h1>our work</h1>
                     <p>We <em>design & develop</em> wordpress websites, custom websites, ADA, mobile apps, prototypes, games, logos, illustrations, animations, videos, and music.</p>
                     <div id="carousel-container" [class]="toggleCaption ? 'enable-caption' : ''">
-                        <amp-carousel id="carousel" width="800" height="600" layout="responsive" type="slides" autoplay="" controls="">
+                        <amp-carousel id="carousel" width="800" height="600" layout="responsive" type="slides" controls="" loop="">
                             <div class="slide-item">
                                 <amp-img src="img/1.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
                                 <div class="caption">We rebuilt the Cold Stone Creamery website to be WCAG 2.0 (AA) ADA compliant and made the desktop view fully mobile responsive.</div>
@@ -147,6 +149,10 @@
                             <div class="slide-item">
                                 <amp-img src="img/14.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
                                 <div class="caption">We designed and developed Boxel Rebound for Android and Google Web Store. <a href="https://chrome.google.com/webstore/detail/boxel-rebound/iginnfkhmmfhlkagcmpgofnjhanpmklb/reviews?hl=en-US" target="_blank">Play now!</a></div>
+                            </div>
+                            <div class="slide-item black">
+                                <amp-vimeo data-videoid="319353755" width="800" height="600" layout="responsive"></amp-vimeo>
+                                <div class="caption">We filmed and edited the wedding video for Beth and Hayden.</div>
                             </div>
                             <div class="slide-item">
                                 <amp-img src="img/5.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
