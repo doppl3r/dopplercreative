@@ -57,8 +57,8 @@
             p { font-size: 16px; line-height: 28px; margin: 0 auto; max-width: 780px; padding: 0; word-break: break-word; }
             a { color: inherit; text-decoration: none; }
             section { background-color: #fff; color: #000; display: flex; align-items: center; justify-content: stretch; overflow-x: hidden; padding: 96px 12px; position: relative; width: 100%; }
-            section.fullscreen { min-height: 100vh; }
-            #team .row { max-width: 1024px; margin: auto; }
+            section.fullscreen { min-height: 75vh; }
+            #team .row { max-width: 800px; margin: auto; }
             #logos { background-color: #f1f1f1; }
             #logos .row { max-width: 1024px; margin: auto; }
             #logos amp-img { filter: grayscale(100%); opacity: 0.75; }
@@ -68,7 +68,7 @@
             .button:hover { background-color: #fff; color: #000; }
             .button .material-icons, .button:hover .material-icons { padding: 0; font-size: 36px; }
             .material-icons { font-size: 48px; padding: 36px 12px; vertical-align: middle; }
-            .status { font-size: 16px; line-height: 16px; position: relative; display: inline-block; margin: 64px 0; vertical-align: middle; font-style: italic; }
+            .status { font-size: 16px; line-height: 16px; position: relative; display: flex; margin: 64px auto 0; vertical-align: middle; font-style: italic; align-items: center; justify-content: center; }
             .status i { padding: 4px; font-size: 24px; animation: fade-in 1s ease-in-out infinite alternate; }
             .white-text { background-color: transparent; color: #fff; }
             .white-text:before { background-color: #000; z-index: -2; }
@@ -76,8 +76,8 @@
             .white-text:after, .white-text:before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
             .white-text .button { background-color: #fff; color: #000; }
             .white-text .button:hover { background-color: #000; color: #fff; }
-            .background-one:after { background-image: url('img/46606251434_735c29298b_o.jpg'); background-position: 50% 25%; }
-            .background-two:after { background-image: url('img/jakob-owens-231036-unsplash.jpg'); filter: grayscale(100%); }
+            .background-one:after { background-image: url('img/light-map.png'); }
+            .background-two:after { background-image: url('img/isometric-tiles.png'); }
             .profile { padding: 24px 12px; display: block; }
             .profile amp-img { background-color: #ffffff; filter: grayscale(100%); max-width: 256px; margin: auto; }
             .profile amp-img:hover { filter: grayscale(0%); }
@@ -118,7 +118,7 @@
                 <div class="col">
                     <h1 id="my-name">Doppler Creative<br></h1>
                     <p>software & design solutions</p>
-                    <p class="status"><i class="material-icons">offline_bolt</i>Google AMP Certified</p>
+                    <p class="status"><i class="material-icons">wifi</i>Scottsdale, AZ</p>
                 </div>
             </div>
         </section>
@@ -257,7 +257,7 @@
                 </div>
             </div>
         </section>
-        <section class="fullscreen white-text background-two">
+        <section class="fullscreen white-text background-two" id="contact">
             <div class="row">
                 <div class="col">
                     <h1>contact us</h1>
