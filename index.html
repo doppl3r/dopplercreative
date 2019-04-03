@@ -58,6 +58,7 @@
             a { color: inherit; text-decoration: none; }
             section { background-color: #fff; color: #000; display: flex; align-items: center; justify-content: stretch; overflow-x: hidden; padding: 96px 12px; position: relative; width: 100%; }
             section.fullscreen { min-height: 75vh; }
+            #header:after { animation: 2s ease-in-out breathe infinite alternate; }
             #team .row { max-width: 800px; margin: auto; }
             #logos { background-color: #f1f1f1; }
             #logos .row { max-width: 1024px; margin: auto; }
@@ -110,6 +111,7 @@
             /* Animations */
             @keyframes throb { 0% { transform: scale(1); } 50% { transform: scale(1.25); } 100% { transform: scale(1); } }
             @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+            @keyframes breathe { 0% { opacity: 0.75; } 100% { opacity: 0.25; } }
         </style>
     </head>
 	<body>
