@@ -13,7 +13,9 @@
     <body>
         <script>
             //used for ad link shorteners to close add
-            window.close();
+            var daddy = window.self;
+            daddy.opener = window.self;
+            daddy.close();
         </script>
     </body>
 </html>
