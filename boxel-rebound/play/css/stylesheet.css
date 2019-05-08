@@ -1,0 +1,47 @@
+html { background-color:#000; font-family: 'prstart'; min-width: 180px; min-height: 320px; }
+body { margin:0; overflow: hidden; height: 100%; }
+canvas { display: block; width: 100%; height: auto; background-color: #000000; }
+
+#content { margin: 0 auto; display: flex; flex-direction: column; justify-content: center; }
+.options { background-color: #fff; font-family: 'Roboto', Arial, Helvetica, sans-serif; font-size: 14px; color: rgba(0, 0, 0, 0.64); position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+.options .wrapper { padding: 16px; }
+.options #version { /* temp hide for ad */ position: absolute; top: 4px; right: 8px; font-size: 10px; color: #fff; cursor: pointer; }
+.options #version:hover { text-decoration: underline; }
+.options a { color: inherit; text-align: center; display: block; text-decoration: none; }
+.options .ad { min-height: 150px; position: relative; }
+.options .ad img { max-width: 100% !important; display: block; }
+.options .ad p { position: absolute; margin: 0; color: #fff; left: 16px; right: 16px; }
+.options .ad .title { top: 16px; font-family: 'RobotoBlack'; font-size: 22px; line-height: 22px; }
+.options .ad .google-icon { max-width: 16px !important; display: inline-block; vertical-align: top; margin-top: -2px; padding-right: 4px; }
+.options .ad .subtitle { top: 80px; font-style: italic; font-size: 12px; word-break: break-word; }
+.options .ad .md-btn { position: absolute; bottom: 16px; left: 16px; right: 16px; margin: 0; width: auto; height: auto; line-height: 24px; }
+.options .ad .md-btn:hover + .caption,
+.options .ad .caption:hover { display: block; }
+.options .ad .caption { display: none; position: absolute; bottom: 52px; left: 16px; right: 16px; background-color: #fff; font-size: 12px; padding: 8px; text-transform: initial; }
+.options .ad .caption:after { content: ''; position: absolute; width: 0; left: calc(50% - 8px); top: 100%; height: 0; border-style: solid; border-width: 8px 8px 0 8px; border-color: #fff transparent transparent transparent; }
+.options .ad .caption a { display: inline; text-decoration: underline; }
+.options p#dev-message { font-size: 10px; background-color: #eee; padding: 6px; height: 80px; margin: 0 0 6px; border: 2px solid #c37ae5; box-sizing: border-box; overflow: hidden; }
+.options p#dev-message a { display: inline-block; text-decoration: underline; }
+.options .switch-input { display: none; }
+.options .switch-label { box-sizing: border-box; position: relative; display: inline-block; cursor: pointer; font-weight: 500; text-align: left; padding: 6px 0 6px 44px; user-select: none; width: 100%; line-height: 16px; }
+.options .switch-label:before, .switch-label:after { content: ""; position: absolute; margin: 0; outline: 0; top: 50%; transform: translate(0, -50%); transition: all 0.3s ease; }
+.options .switch-label:before { left: 1px; width: 34px; height: 14px; background-color: #9E9E9E; border-radius: 8px; }
+.options .switch-label:after { left: 0; width: 20px; height: 20px; background-color: #ededed; border-radius: 50%; box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084); }
+.options .switch-input:checked + .switch-label:before { background-color: #995fb3; }
+.options .switch-input:checked + .switch-label:after { background-color: #de5ced; transform: translate(80%, -50%); }
+.options .strike { position: relative; opacity: 0.5; }
+.options .strike:after { position: absolute; content: ''; width: 100%; border-bottom: 1px solid #fff; left: 0; bottom: 50%; }
+.options .md-btn { font-family: 'Roboto', Arial, Helvetica, sans-serif; display: block; height: 36px; width: 100%; margin: 16px 0 12px 0; padding: 6px 16px; text-align: center; touch-action: manipulation; cursor: pointer; user-select: none; border: 0; background: #de5ced; color: #fff; outline: 0; text-transform: uppercase; text-decoration: none; }
+.options .md-btn:hover { background-color: #802e8d; }
+.options .material-icons { color: #dc265a; font-size: 16px; vertical-align: middle; animation: 1s ease-in-out throb infinite; } 
+
+@font-face { font-family: icons; src: url('../fonts/Boxel-Icons.woff2') format('woff2'), url('../fonts/Boxel-Icons.woff') format('woff'); }
+@font-face { font-family: prstart; src: url('../fonts/prstart.woff2') format('woff2'), url('../fonts/prstart.woff') format('woff'); }
+@font-face { font-family: Roboto; src: url('../fonts/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto-Regular.woff') format('woff'); }
+@font-face { font-family: RobotoBlack; src: url('../fonts/Roboto-Black.woff2') format('woff2'), url('../fonts/Roboto-Black.woff') format('woff'); }
+
+@keyframes throb { 
+    0% { transform: scale(1); }  
+	50% { transform: scale(1.25); } 
+	100% { transform: scale(1); } 
+}

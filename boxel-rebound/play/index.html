@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' name='viewport' />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <link rel="icon" type="image/png" href="img/icons/icon.png">
+        <title>Boxel Rebound</title>
+    </head>
+    <body oncontextmenu="return false;">
+        <div class="app">
+            <div id="content">
+                <canvas id="gameCanvas" width="360" height="640"></canvas>
+            </div>
+        </div>
+
+        <form id="id-options" class="options" style="display: none;">
+            <div class="ad">
+                <img src="img/ad.png" />
+                <p class="title">Boxel<br> Rebound</p>
+                <p class="subtitle">Loading store...</p>
+                <!-- <a href="#" class="md-btn" id="boxel_rebound_pro"><span class="strike">$1.99</span> $0.99</a> -->
+            </div>
+            <span id="version"></span>
+            <div class="wrapper">
+                <input id="id-audio" type="checkbox" class="switch-input">
+                <label for="id-audio" class="switch-label">Audio</label>
+                <input id="id-fullscreen" type="checkbox" class="switch-input">
+                <label for="id-fullscreen" class="switch-label">Fullscreen</label>
+                <button id="id-play" type="button" class="md-btn" autofocus>play</button>
+                <a href="#" id="id-social"><i class="material-icons">favorite</i> write a review</a>
+            </div>
+        </form>
+
+        <!--Game foundation-->
+        <script src="js/lz-string.min.js"></script>
+        <script src="js/preloadjs-NEXT.min.js"></script>
+        <script src="js/soundjs-NEXT.min.js"></script>
+        <script src="js/easeljs-NEXT.min.js"></script>
+        <script src="js/tweenjs-NEXT.min.js"></script>
+        <script src="js/firebase.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="cordova.js"></script>
+
+        <!-- Game 'Classes'  -->
+        <script type="text/javascript" src="js/AssetManager.js"></script>
+        <script type="text/javascript" src="js/Theme.js"></script>
+        <script type="text/javascript" src="js/Home.js"></script>
+        <script type="text/javascript" src="js/Interface.js"></script>
+        <script type="text/javascript" src="js/DialogWindow.js"></script>
+        <script type="text/javascript" src="js/Timer.js"></script>
+        <script type="text/javascript" src="js/LevelMap.js"></script>
+        <script type="text/javascript" src="js/LevelEditor.js"></script>
+        <script type="text/javascript" src="js/StorageManager.js"></script>
+        <script type="text/javascript" src="js/Tiles.js"></script>
+        <script type="text/javascript" src="js/Player.js"></script>
+        <script type="text/javascript" src="js/Gravity.js"></script>
+        <script type="text/javascript" src="js/Particles.js"></script>
+        <script type="text/javascript" src="js/Button.js"></script>
+        <script type="text/javascript" src="js/LunchBox.js"></script>
+        <script type="text/javascript" src="js/Game.js"></script>
+        <script type="text/javascript" src="js/FileSaver.min.js"></script>
+        <script type="text/javascript" src="js/buy.js"></script>
+        <script type="text/javascript" src="js/Extension.js"></script>
+        <script type="text/javascript" src="js/analytics.js"></script>
+    </body>
+</html>
