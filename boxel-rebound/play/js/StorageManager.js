@@ -233,8 +233,23 @@
             localStorage.setItem("volume", volume);
         };
         this.getVolume = function(){
-            volume = localStorage.getItem("volume");
-            return volume !== null ? volume : 1; //set 100% volume if empty
+            var volume = localStorage.getItem("volume");
+            if (volume == null) localStorage.setItem("volume", 0); //set 0% volume if empty
+            return volume;
+        };
+        this.toggleVolume = function(){
+            var volume = localStorage.getItem("volume");
+            localStorage.setItem("volume", volume != 0 ? 0 : 1);
+            window.Game.syncLocalVolume();
+        };
+        this.getFullscreenValue = function(){
+            var fullscreen = localStorage.getItem("fullscreen");
+            if (fullscreen == null) localStorage.setItem("fullscreen", 0); //default 0 if empty
+            return fullscreen;
+        }
+        this.toggleFullscreenValue = function(){
+            var fullscreen = localStorage.getItem("fullscreen");
+            localStorage.setItem("fullscreen", fullscreen != 0 ? 0 : 1);
         };
         this.getTotalScoreString = function(raw){
             var score = 0;
@@ -249,7 +264,7 @@
             if (raw) score = score.splice(score.length - 2, 0, "."); //splice prototype from LunchBox.js;
             else score = Number(score).toLocaleString();
             return score
-        }
+        };
 
         this.checkDailyLimit = function(limitType){
             var date = Date.now();
@@ -273,21 +288,25 @@
             localStorage.setItem(key, localStorage.getItem(key) - 1);
             if (localStorage.getItem(key) >= 0) limit = true;
             return limit;
-        }
+        };
+
+        this.setLicense = function(license){
+            localStorage.setItem('license', license);
+        };
 
         this.hasLicense = function(){
             return localStorage.getItem('license') == 'boxel_rebound_pro';
-        }
+        };
 
         this.setSkin = function(skin){
             localStorage.setItem('skin', skin);
-        }
+        };
 
         this.getSkin = function(){
             var skin = localStorage.getItem('skin');
             if (skin == null) { skin = 0; this.setSkin(skin); }
             return parseInt(skin);
-        }
+        };
 
         //initiate variables
         this.init();

@@ -125,6 +125,7 @@
             if (!createjs.Ticker.hasEventListener("tick")) {
                 createjs.Ticker.addEventListener("tick", function(event){ window.Game.tick(event); });
                 createjs.Ticker.timingMode = createjs.Ticker.RAF;
+                //createjs.Ticker.timingMode = createjs.Ticker.TIMEOUT;
                 //createjs.Ticker.setFPS(24);
             }
         };

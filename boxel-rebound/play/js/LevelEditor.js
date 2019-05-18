@@ -25,7 +25,7 @@
             //listen to screen actions
             if (this.screen == 1){
                 if (this.back_button.isClicked()){
-                    this.updateUI();
+                    this.updateUI(1);
                     window.Game.home.setUI();
                     window.Game.player.respawn();
                     window.Game.setView(1);
@@ -39,7 +39,7 @@
                         window.storageManager.setLevelString(window.Game.levelMap.toString());
                         window.storageManager.tipString = ""; //empty string
                         this.selectedButtonIndex = window.storageManager.saveToLocalStorage(); //returns index of latest save id
-                        this.updateUI();
+                        this.updateUI(1);
                         ga('send', 'event', 'game', 'added');
                     }
                     else {
@@ -406,7 +406,8 @@
                     bigBox*3, bigBox/2);
                 level.setFontSize(0.9);
                 level.addStroke(this.box12 / 5,"#000000", "inner"); //6 point stroke
-                this.levelButtons.addChildAt(level,i);
+                //this.levelButtons.addChildAt(level,i);
+                this.levelButtons.addChildAt(level);
             }
         };
         this.sortLevelButtons = function(){
@@ -475,7 +476,7 @@
         this.escapeKey = function(){
             if (this.screen == 1){ //return to home screen
                 if (window.Game.dialog.isClosed()){
-                    this.updateUI();
+                    this.updateUI(1);
                     window.Game.player.respawn();
                     window.Game.setView(1);
                 }

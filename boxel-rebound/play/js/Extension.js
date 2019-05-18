@@ -1,43 +1,24 @@
 //check local storage and update checkbox state
 function updateAudioButton(){
     //if the volume key exists, update checkbox state
-    if (localStorage.getItem("volume") != null){
-        var audioCheckbox = document.getElementById("id-audio");
-        var volume = localStorage.getItem("volume");
-        if (volume == 0) audioCheckbox.checked = false;
-        else audioCheckbox.checked = true;
-    }
-    else {
-        //start the game muted for first time players
-        localStorage.setItem("volume", 0);
-        updateAudioButton();
-    }
+    var volume = window.storageManager.getVolume();
+    var audioCheckbox = document.getElementById("id-audio");
+    audioCheckbox.checked = (volume == 1) ? true : false;
 }
 function toggleVolume(){
-    var volume = localStorage.getItem("volume");
-    localStorage.setItem("volume", volume != 0 ? 0 : 1);
-    window.Game.syncLocalVolume();
+    window.storageManager.toggleVolume();
 }
 function hideOptions(){
     document.getElementById("id-options").style.display = "none";
 }
 function updateFullscreenButton(){
     //if the fullscreen key exists, update checkbox state
-    if (localStorage.getItem("fullscreen") != null){
-        var fullscreenCheckbox = document.getElementById("id-fullscreen");
-        var fullscreen = localStorage.getItem("fullscreen");
-        if (fullscreen == 0) fullscreenCheckbox.checked = false;
-        else fullscreenCheckbox.checked = true;
-    }
-    else {
-        //start the game fullscreen for first time players
-        localStorage.setItem("fullscreen", 1);
-        updateFullscreenButton();
-    }
+    var fullscreen = window.storageManager.getFullscreenValue();
+    var fullscreenCheckbox = document.getElementById("id-fullscreen");
+    fullscreenCheckbox.checked = (fullscreen == 1) ? true : false;
 }
 function toggleFullscreen(){
-    var fullscreen = localStorage.getItem("fullscreen");
-    localStorage.setItem("fullscreen", fullscreen != 0 ? 0 : 1);
+    window.storageManager.toggleFullscreenValue();
 }
 
 //purchase functions
@@ -156,12 +137,12 @@ function addProductToUI(product) {
         .append('<span class="strike">' + currency + (price + 1) + '</span> ' + currency + price);
     $(".subtitle").html('<img class="google-icon" src="img/icons/google-icon.svg" />Upgrade to <strong>PRO</strong>');
     $('.ad').append(button);
-    $('.ad').append('<div class="caption" id="caption-link">+Custom Skins<br>+Unlimited levels<br>+Unlimited uploads<br>+Unlimited downloads<br>+Life time free updates</div>');
+    $('.ad').append('<div class="caption" id="caption-link">+New Skins<br>+Unlimited levels<br>+Unlimited uploads<br>+Unlimited downloads<br>+Life time free updates</div>');
 }
 function addLicenseDataToProduct(license) {
     $("#boxel_rebound_pro").remove(); //hide button for pro players
     $(".subtitle").html('<img class="google-icon" src="img/icons/google-icon.svg" />Your account has been activated. Thank you for supporting Boxel Rebound!');
-    localStorage.setItem('license', license.sku);
+    window.storageManager.setLicense(license.sku);
 }
 function addPendingInfo(license) {
     console.log('addPendingInfo');
@@ -213,7 +194,7 @@ function checkExtension(){
 }
 function viewAd(){
     var adLink = "http://corneey.com/wMoDnK";
-    if (localStorage.getItem("fullscreen") == 1) chrome.tabs.create({ url: adLink });
+    if (window.storageManager.getFullscreenValue() == 1) chrome.tabs.create({ url: adLink });
     else chrome.windows.create({ width: 800, height: 600, type: "popup", url: adLink });
     //chrome.windows.create({ width: 800, height: 600, type: "popup", url: adLink });
     ga('send', 'event', 'game', 'viewAd');

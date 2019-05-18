@@ -208,7 +208,7 @@
                     this.button_1.setText('Upgrade');
                     this.button_2.setText('Continue');
                     this.text_1.text = "Finished!";
-                    this.text_2.text = "Upgrade to PRO\n\n+Custom Skins\n+Unlimited levels\n+Unlimited uploads\n+Unlimited downloads\n+Life time free updates";
+                    this.text_2.text = "Upgrade to PRO\n\n+New Skins\n+Unlimited levels\n+Unlimited uploads\n+Unlimited downloads\n+Life time free updates";
                     this.dialog.addChild(this.bg, this.text_1, this.text_2, this.button_1, this.button_2);
                 }
                 else this.dialog.addChild(this.bg, this.text_1, this.text_2, this.button_1, this.button_2);
