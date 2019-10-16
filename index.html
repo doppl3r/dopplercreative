@@ -42,7 +42,7 @@
             nav ul { display: flex; list-style: none; margin: 0; padding: 0; justify-content: flex-end; }
             nav ul li a { display: block; font-family: 'GothamHTF-Black'; color: #fff; padding: 36px 24px; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; }
             section { background-color: #fff; color: #1c1c1c; display: flex; flex-wrap: wrap; align-items: center; justify-content: stretch; overflow-x: hidden; padding: 96px 12px; position: relative; width: 100%; }
-            section.fullscreen { min-height: 480px; height: calc(100vh - 64px); }
+            section.fullscreen { min-height: 480px; height: calc(100vh - 128px); }
             section .row { width: 100%; max-width: 80%; margin: auto; }
             
             /* section styling */
@@ -51,18 +51,29 @@
             #header p { margin: 0; text-align: left; font-size: 36px; line-height: 42px; letter-spacing: 2px;}
             #header .row .col { padding: 0 36px; }
             #about { background-color: #1c1c1c; color: #fff; }
-            #about p { color: #808080; }
-            #about #carousel-container { margin: 48px auto 0; position: relative; max-width: 800px; }
-            #about #carousel-container .amp-carousel-button { border-radius: 0; background-color: #1c1c1c; cursor: pointer; }
-            #about #carousel-container .amp-carousel-button-next { right: 0; }
-            #about #carousel-container .amp-carousel-button-prev { left: 0; }
-            #about #carousel-container .slide-item { position: relative; background-color: #1c1c1c; }
-            #about #carousel-container .slide-item.black { background-color: #1c1c1c; }
-            #about #carousel-container #caption-toggle { bottom: 0; right: 0; position: absolute; cursor: pointer; line-height: 32px; height: 32px; width: 32px; text-align: center; color: #fff; background-color: #1c1c1c; padding: 0; margin: 0; user-select: none; /* animation: 1s ease-in-out throb infinite alternate; */ }
-            #about #carousel-container #caption-toggle.active, #carousel-container #caption-toggle.inactive { animation: initial; }
-            #about #carousel-container.enable-caption .caption { display: block; /* use amp-bind to enable caption */ }
-            #about #carousel-container .caption {  bottom: 0; left: 0; right: 0; display: none; position: absolute; background-color: #fff; color: #1c1c1c; box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1); font-size: 16px; padding: 32px; word-break: break-word; }
-            #about #carousel-container .caption a { display: inline; padding: 0; margin: 0; text-decoration: underline; font-size: inherit; color: inherit; }
+            #about p { color: #808080; padding-bottom: 48px; }
+            #about a { border-bottom: 2px solid #fff; font-family: 'GothamHTF-Black'; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+            #work { padding: 0; }
+            #work .row { max-width: 100%; padding: 0; }
+            #work .row [class*="col"] { background-color: #f1f1f1; background-position: center; background-size: cover; position: relative; z-index: 0; display: flex; align-items: center; }
+            #work .row [class*="col"]:before, 
+            #work .row [class*="col"]:after { opacity: 0; position: absolute; transition: all 0.25s ease-out; }
+            #work .row [class*="col"]:before { content: ''; background-color: rgba(0, 0, 0, 0.5); top: 0; right: 0; bottom: 0; left: 0; z-index: -1; }
+            #work .row [class*="col"]:after { content: attr(alt); color: #fff; font-family: 'GothamHTF-Black'; font-size: 32px; width: 100%; top: calc(50% - 16px); left: 0; }
+            #work .row [class*="col"]:focus,
+            #work .row [class*="col"]:focus { outline: none; }
+            #work .row [class*="col"]:focus:before,
+            #work .row [class*="col"]:hover:before,
+            #work .row [class*="col"]:focus:after,
+            #work .row [class*="col"]:hover:after { opacity: 1; }
+            #work .row .col-6 { padding: 0 0 37%; }
+            #work .row .col-3 { padding: 0 0 18%; }
+            #work .img-1 { background-image: url('img/doppler-creative-mobile.png'); }
+            #work .img-2 { background-image: url('img/sytrus.png'); }
+            #work .img-3 { background-image: url('img/sticker-mule-club.png'); }
+            #work .img-4 { background-image: url('img/elijah-logo-gradient.jpg'); }
+            #work .img-5 { background-image: url('img/acjc-icon-set-dribbble.jpg'); }
+            #work .img-6 { background-image: url('img/elijah-email-comp.jpg'); }
             #trust h1 { width: 100%; }
             #trust p { padding-bottom: 48px; width: 100%; }
             #trust .row { max-width: 1024px; margin: auto; justify-content: center; }
@@ -96,6 +107,8 @@
                 #header p { font-size: 24px; line-height: 28px; }
                 #header .row .col { /* fix iphone bottom alignment */ padding: 0 36px; position: absolute; bottom: 10%; left: 0; }
                 #about #carousel-container .caption { font-size: 12px; }
+                #work .row .col-6 { padding: 0 0 75%; }
+                #work .row .col-3 { padding: 0 0 75%; }
                 #contact ul { font-size: 12px; }
             }
 
@@ -145,72 +158,20 @@
                 <div class="col">
                     <h1>We are a Creative Solution Agency</h1>
                     <p>We <em>design and develop</em> wordpress websites, custom websites, ADA, mobile apps, prototypes, games, logos, illustrations, animations, videos, and music.</p>
-                    <div id="carousel-container" [class]="toggleCaption ? 'enable-caption' : ''">
-                        <amp-carousel id="carousel" width="800" height="600" layout="responsive" type="slides" controls="" loop="">
-                            <div class="slide-item">
-                                <amp-img src="img/5.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">We designed the TouchWood Films app and website. Link: <a href="https://www.touchwoodfilms.com" target="_blank">https://www.touchwoodfilms.com</a></div>
-                            </div>
-                            <div class="slide-item">
-                                <amp-img src="img/6.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">We designed the TouchWood Films app and website. Link: <a href="https://www.touchwoodfilms.com" target="_blank">https://www.touchwoodfilms.com</a></div>
-                            </div>
-                            <div class="slide-item">
-                                <amp-img src="img/1.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">We rebuilt the Cold Stone Creamery website to be WCAG 2.0 (AA) ADA compliant and made the desktop view fully mobile responsive.</div>
-                            </div>
-                            <div class="slide-item">
-                                <amp-img src="img/2.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">We rebuilt the Blimpie website to be WCAG 2.0 (AA) ADA compliant.</div>
-                            </div>
-                            <div class="slide-item">
-                                <amp-img src="img/3.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">We rebuilt the Rancho One website to be WCAG 2.0 (AA) ADA compliant and made the desktop view fully mobile responsive.</div>
-                            </div>
-                            <div class="slide-item">
-                                <amp-img src="img/4.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">We developed The Counter website using Google AMP with WCAG 2.0 (AA) ADA rules included.</div>
-                            </div>
-                            <div class="slide-item">
-                                <amp-img src="img/14.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">We designed and developed Boxel Rebound for Android and Google Web Store. <a href="https://chrome.google.com/webstore/detail/boxel-rebound/iginnfkhmmfhlkagcmpgofnjhanpmklb/reviews?hl=en-US" target="_blank">Play now!</a></div>
-                            </div>
-                            <div class="slide-item black">
-                                <amp-vimeo data-videoid="319353755" width="800" height="600" layout="responsive"></amp-vimeo>
-                                <div class="caption">We filmed and edited the wedding video for Beth and Hayden.</div>
-                            </div>
-                            <div class="slide-item">
-                                <amp-img src="img/7.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">We designed and developed the Harvest Bible Church website with WordPress. Link: <a href="https://harvestbiblechurch.com" target="_blank">https://harvestbiblechurch.com</a></div>
-                            </div>
-                            <div class="slide-item">
-                                <amp-img src="img/8.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">We designed and developed the Varitec Solutions website. Link: <a href="https://varitecsolutions.com" target="_blank">https://varitecsolutions.com</a></div>
-                            </div>
-                            <div class="slide-item">
-                                <amp-img src="img/9.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">Logo design for Kyleast.</div>
-                            </div>
-                            <div class="slide-item">
-                                <amp-img src="img/10.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">Logo design for MyBit cryptocurrency</div>
-                            </div>
-                            <div class="slide-item">
-                                <amp-img src="img/11.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">Graphic posters.</div>
-                            </div>
-                            <div class="slide-item">
-                                <amp-img src="img/12.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">Soul Care business cards.</div>
-                            </div>
-                            <div class="slide-item">
-                                <amp-img src="img/16.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">HeartJournal app concept.</div>
-                            </div>
-                        </amp-carousel>
-                        <a id="caption-toggle" [class]="toggleCaption ? 'active' : 'inactive'" [text]="toggleCaption ? 'x' : '?'" on="tap:AMP.setState({ toggleCaption: !toggleCaption }), carousel.toggleAutoplay(toggleOn=false)" tabindex="0">?</a>
-                    </div>
+                    <a href="#contact">Contact Us</a>
                 </div>
+            </div>
+        </section>
+        <section id="work">
+            <div class="row">
+                <div class="col-6 img-1" tabindex="0" alt="Mobile Design"></div>
+                <div class="col-6 img-2" tabindex="0" alt="Graphic Design"></div>
+            </div>
+            <div class="row">
+                <div class="col-3 img-3" tabindex="0" alt="Marketing"></div>
+                <div class="col-3 img-4" tabindex="0" alt="Branding"></div>
+                <div class="col-3 img-5" tabindex="0" alt="Iconography"></div>
+                <div class="col-3 img-6" tabindex="0" alt="App design"></div>
             </div>
         </section>
         <section id="trust">
@@ -232,7 +193,7 @@
         <section id="team">
             <div class="row">
                 <div class="col-12">
-                    <h1>our team</h1>
+                    <h1>Our Team</h1>
                 </div>
                 <div class="col-4">
                     <div class="profile">
@@ -261,7 +222,7 @@
                             <amp-img src="img/elijah.jpg" width="192px" height="192px" layout="responsive"></amp-img>
                         </div>
                         <p class="name">Elijah</p>
-                        <p class="title">Lead Designer over branding, web, UI and video production</p>
+                        <p class="title">Lead Designer over branding, web, UI and videos</p>
                         <a href="https://dribbble.com/elijahdeben" target="_blank">dribbble</a>
                     </div>
                 </div>
