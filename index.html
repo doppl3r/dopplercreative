@@ -80,18 +80,21 @@
 
             /* Mobile responsive query */
             @media (max-width: 768px) {
+                h1 { font-size: 28px;  }
+                p { font-size: 18px; line-height: 24px; }
                 section { min-height: initial; }
                 section .row { max-width: 100%; }
                 nav .row { max-width: 100%; }
                 nav .row .logo { position: absolute; top: 24px; left: 36px; padding: 0; }
-                nav .mobile-toggle { display: block; position: absolute; top: 0; right: 0; padding: 21px 24px; cursor: pointer; }
+                nav .mobile-toggle { display: block; position: absolute; top: 0; right: 0; padding: 21px 24px; cursor: pointer; border-radius: 12px; border-bottom-right-radius: 0; border-bottom-left-radius: 0; }
                 nav .mobile-toggle[selected],
                 nav .mobile-toggle:active { outline: none; cursor: pointer; background-color: #1c1c1c; }
                 nav .mobile-toggle[selected] + ul { display: block; }
-                nav ul { display: none; /* hide default */ position: absolute; top: 60px; left: 0; width: 100%; background-color: #1c1c1c; padding: 36px 0; }
+                nav ul { display: none; /* hide default */ position: absolute; top: 60px; left: 0; width: 100%; background-color: #1c1c1c; padding: 36px 0; border-radius: 12px; border-top-right-radius: 0; }
                 nav ul li a { padding: 24px 12px; }
                 #header { padding-bottom: 10%; }
                 #header p { font-size: 24px; line-height: 28px; }
+                #header .row .col { /* fix iphone bottom alignment */ padding: 0 36px; position: absolute; bottom: 10%; left: 0; }
                 #about #carousel-container .caption { font-size: 12px; }
                 #contact ul { font-size: 12px; }
             }
