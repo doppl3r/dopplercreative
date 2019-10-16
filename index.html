@@ -16,32 +16,8 @@
         <script async="" custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
         <script async="" custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
         <script async="" custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+        <script async="" custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
         <script async="" custom-element="amp-vimeo" src="https://cdn.ampproject.org/v0/amp-vimeo-0.1.js"></script>
-        <script type="application/ld+json">
-            {
-                "@context": "http://schema.org",
-                "@type": "CreativeWork",
-                "mainEntityOfPage": "https://dopplercreative.com/index.html",
-                "headline": "Software and Creative Solutions",
-                "datePublished": "2014-04-01",
-                "dateModified": "2018-03-10",
-                "description": "View recent projects, clients, and testimonies.",
-                "author": {
-                    "@type": "Company",
-                    "name": "Doppler Creative"
-                },
-                "publisher": {
-                    "@type": "Organization",
-                    "name": "dopplercreative.com",
-                    "logo": {
-                        "@type": "ImageObject",
-                        "url": "https://dopplercreative.com/logo.png",
-                        "width": 144,
-                        "height": 144
-                    }
-                }
-            }
-        </script>
         <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
         <style amp-custom="" type="text/css">
             /* CSS Normalizer */
@@ -52,63 +28,69 @@
 
             /* CSS Global */
             * { box-sizing: border-box; }
-            html { animation: fade-in 1s ease-in-out; background-color: #000; color: #000; }
+            html { animation: fade-in 1s ease-in-out; background-color: #1c1c1c; color: #1c1c1c; }
             body { text-align: center; font-family: 'GothamHTF-Light'; }
-            h1 { font-family: 'GothamHTF-Black'; font-size: 40px; margin: 0; text-transform: lowercase; }
-            p { font-size: 16px; line-height: 21px; margin: 0 auto; max-width: 780px; padding: 0; word-break: break-word; }
+            h1 { font-family: 'GothamHTF-Black'; font-size: 40px; margin: 0; padding: 0 0 36px; text-transform: lowercase; }
+            p { font-size: 24px; line-height: 28px; margin: 0 auto; max-width: 780px; padding: 0; word-break: break-word; }
             a { color: inherit; text-decoration: none; }
-            section { background-color: #fff; color: #000; display: flex; flex-wrap: wrap; align-items: center; justify-content: stretch; overflow-x: hidden; padding: 96px 12px; position: relative; width: 100%; }
-            section.fullscreen { min-height: 75vh; }
-            #header:after { animation: 2s ease-in-out breathe infinite alternate; }
+            ul { list-style: none; padding: 0; margin: 0; }
+            nav { position: absolute; top: 0; left: 0; padding: 24px 0; width: 100%; z-index: 1; }
+            nav .row { max-width: 1200px; margin: auto; }
+            nav .row .logo { display: flex; flex-grow: 0; padding: 0 0 0 36px; align-items: center; }
+            nav .row .logo a { width: 64px; }
+            nav .mobile-toggle { display: none; /* default hidden */ }
+            nav ul { display: flex; list-style: none; margin: 0; padding: 0; justify-content: flex-end; }
+            nav ul li a { display: block; font-family: 'GothamHTF-Black'; color: #fff; padding: 36px; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; }
+            section { background-color: #fff; color: #1c1c1c; display: flex; flex-wrap: wrap; align-items: center; justify-content: stretch; overflow-x: hidden; padding: 96px 12px; position: relative; width: 100%; }
+            section.fullscreen { min-height: 480px; height: calc(100vh - 64px); }
+            section .row { width: 100%; max-width: 1200px; margin: auto; }
+            section .material-icons { font-size: 48px; padding: 36px 12px; vertical-align: middle; }
+            section .status { font-size: 16px; line-height: 16px; position: relative; display: flex; margin: 64px auto 0; vertical-align: middle; font-style: italic; align-items: center; justify-content: center; }
+            section .status i { padding: 4px; font-size: 24px; animation: fade-in 1s ease-in-out infinite alternate; }
+            
+            /* section styling */
+            #header { background: #6aa7fa; background: linear-gradient(45deg, #df50e6 0%,#6aa7fa 100%); color: #fff; align-content: flex-end; padding: 0 24px 5% 5%; }
+            #header h1 { margin: 0; text-align: left; font-size: 18px; line-height: 21px; text-transform: uppercase; letter-spacing: 1px; }
+            #header p { margin: 0; text-align: left; font-size: 36px; line-height: 42px; letter-spacing: 2px;}
+            #work { background-color: #1c1c1c; color: #fff; }
+            #work p { color: #808080; }
+            #work #carousel-container { margin: 48px auto 0; position: relative; max-width: 800px; }
+            #work #carousel-container .amp-carousel-button { border-radius: 0; background-color: #1c1c1c; cursor: pointer; }
+            #work #carousel-container .amp-carousel-button-next { right: 0; }
+            #work #carousel-container .amp-carousel-button-prev { left: 0; }
+            #work #carousel-container .slide-item { position: relative; background-color: #f1f1f1; }
+            #work #carousel-container .slide-item.black { background-color: #1c1c1c; }
+            #work #carousel-container #caption-toggle { bottom: 0; right: 0; position: absolute; cursor: pointer; line-height: 32px; height: 32px; width: 32px; text-align: center; color: #fff; background-color: #1c1c1c; padding: 0; margin: 0; user-select: none; /* animation: 1s ease-in-out throb infinite alternate; */ }
+            #work #carousel-container #caption-toggle.active, #carousel-container #caption-toggle.inactive { animation: initial; }
+            #work #carousel-container.enable-caption .caption { display: block; /* use amp-bind to enable caption */ }
+            #work #carousel-container .caption {  bottom: 0; left: 0; right: 0; display: none; position: absolute; background-color: #fff; color: #1c1c1c; box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1); font-size: 16px; padding: 32px; word-break: break-word; }
+            #work #carousel-container .caption a { display: inline; padding: 0; margin: 0; text-decoration: underline; font-size: inherit; color: inherit; }
+            #history h1 { width: 100%; }
+            #history p { padding-bottom: 48px; width: 100%; }
+            #history .row { max-width: 1024px; margin: auto; }
             #team .row { max-width: 800px; margin: auto; }
-            #logos { background-color: #f1f1f1; }
-            #logos h1 { width: 100%; }
-            #logos p { padding-bottom: 48px; width: 100%; }
-            #logos .row { max-width: 1024px; margin: auto; }
-            #logos amp-img { filter: grayscale(100%); opacity: 0.75; }
-            #logos amp-img:hover { filter: grayscale(0%); opacity: 1; }
-            .row { width: 100%; }
-            .button { background-color: #000; color: #fff; border: none; cursor: pointer; display: inline-block; font-size: 24px; margin: 5% 0 0; outline: none; padding: 12px 24px; text-decoration: none; }
-            .button:hover { background-color: #fff; color: #000; }
-            .button .material-icons, .button:hover .material-icons { padding: 0; font-size: 36px; }
-            .material-icons { font-size: 48px; padding: 36px 12px; vertical-align: middle; }
-            .status { font-size: 16px; line-height: 16px; position: relative; display: flex; margin: 64px auto 0; vertical-align: middle; font-style: italic; align-items: center; justify-content: center; }
-            .status i { padding: 4px; font-size: 24px; animation: fade-in 1s ease-in-out infinite alternate; }
-            .white-text { background-color: transparent; color: #fff; }
-            .white-text:before { background-color: #f44240; z-index: -2; }
-            .white-text:after { background-image: url(''); background-size: cover; background-color: #f44240; background-position: 50% 50%; opacity: 0.75; z-index: -1; }
-            .white-text:after, .white-text:before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
-            .white-text a { position: relative; }
-            .white-text a:after { content: ''; border-bottom: 2px dotted #fff; position: absolute; bottom: -4px; left: 0; width: 100%; }
-            .white-text .button { background-color: #fff; color: #000; }
-            .white-text .button:after { display: none; }
-            .white-text .button:hover { background-color: #000; color: #fff; }
-            .background-one:after { /* background-image: url('img/light-map.png'); */ }
-            .background-two:after { /* background-image: url('img/isometric-tiles.png'); */ }
-            .profile { padding: 24px 12px; display: block; }
-            .profile amp-img { background-color: #ffffff; filter: grayscale(100%); max-width: 256px; margin: auto; }
-            .profile amp-img:hover { filter: grayscale(0%); }
-            .profile .name { font-family: 'GothamHTF-Black'; margin-top: 12px; }
-            .profile .title { word-break: break-word; padding-bottom: 12px; }
-            .profile iframe { overflow: hidden; }
-            #carousel-container { margin: 48px auto 0; position: relative; max-width: 800px; }
-            #carousel-container .amp-carousel-button { border-radius: 0; background-color: #000; cursor: pointer; }
-            #carousel-container .amp-carousel-button-next { right: 0; }
-            #carousel-container .amp-carousel-button-prev { left: 0; }
-            #carousel-container .slide-item { position: relative; background-color: #f1f1f1; }
-            #carousel-container .slide-item.black { background-color: #000; }
-            #carousel-container #caption-toggle { bottom: 0; right: 0; position: absolute; cursor: pointer; line-height: 32px; height: 32px; width: 32px; text-align: center; color: #fff; background-color: #000; padding: 0; margin: 0; user-select: none; /* animation: 1s ease-in-out throb infinite alternate; */ }
-            #carousel-container #caption-toggle.active, #carousel-container #caption-toggle.inactive { animation: initial; }
-            #carousel-container.enable-caption .caption { display: block; /* use amp-bind to enable caption */ }
-            #carousel-container .caption {  bottom: 0; left: 0; right: 0; display: none; position: absolute; background-color: #fff; color: #000; box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1); font-size: 16px; padding: 32px; word-break: break-word; }
-            #carousel-container .caption a { display: inline; padding: 0; margin: 0; text-decoration: underline; font-size: inherit; color: inherit; }
+            #team .profile { padding: 24px 12px; display: block; }
+            #team .profile .name { font-family: 'GothamHTF-Black'; margin-top: 12px; }
+            #team .profile .title { font-size: 14px; word-break: break-word; padding-bottom: 12px; }
+            #team .profile iframe { overflow: hidden; }
+            #contact { background-color: #1c1c1c; color: #fff }
+            #contact ul { text-align: left; line-height: 28px; padding-left: 28px; }
+            #contact ul li strong { color: #808080; text-transform: uppercase; padding-right: 24px; }
 
             /* Mobile responsive query */
             @media (max-width: 768px) {
                 h1 { font-size: 24px; }
                 p { font-size: 14px; line-height: 18px; }
                 section { min-height: initial; }
-                #carousel-container .caption { font-size: 12px; }
+                nav .row .logo { position: absolute; top: 12px; left: 36px; padding: 0; }
+                nav .mobile-toggle { display: block; position: absolute; top: 12px; right: 0; padding: 21px 24px; cursor: pointer; }
+                nav .mobile-toggle[selected],
+                nav .mobile-toggle:active { outline: none; cursor: pointer; background-color: #1c1c1c; }
+                nav .mobile-toggle[selected] + ul { display: block; }
+                nav ul { display: none; /* hide default */ position: absolute; top: 72px; left: 0; width: 100%; background-color: #1c1c1c; padding: 36px 0; }
+                nav ul li a { padding: 24px 12px; }
+                #header p { font-size: 24px; line-height: 28px; }
+                #work #carousel-container .caption { font-size: 12px; }
             }
 
             /* Fonts */
@@ -122,12 +104,33 @@
         </style>
     </head>
 	<body>
-        <section class="fullscreen white-text background-one" id="header">
+        <nav>
+            <div class="row">
+                <div class="col logo">
+                    <a href="index.html">
+                        <amp-img src="img/logo-dopplercreative.svg" width="64" height="64" layout="responsive" alt=""></amp-img>
+                    </a>
+                </div>
+                <div class="col links">
+                    <amp-selector layout="container" multiple="">
+                        <a aria-selected="false" class="mobile-toggle" option="1" role="option">
+                            <amp-img alt="menu icon" height="14" layout="fixed" src="img/mobile-toggle.svg" width="22"> </amp-img>
+                        </a>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a href="#team">Team</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </amp-selector>
+                </div>
+            </div>
+        </nav>
+        <section class="fullscreen" id="header">
             <div class="row">
                 <div class="col">
-                    <h1 id="my-name">Doppler Creative<br></h1>
-                    <p>software & creative solutions</p>
-                    <p class="status"><i class="material-icons">wifi</i>Scottsdale, AZ</p>
+                    <h1>Welcome to Doppler Creative</h1>
+                    <p>We Design and Develop High Tech Marketing Solutions for Companies That Value Trust.</p>
                 </div>
             </div>
         </section>
@@ -138,6 +141,14 @@
                     <p>We <em>design and develop</em> wordpress websites, custom websites, ADA, mobile apps, prototypes, games, logos, illustrations, animations, videos, and music.</p>
                     <div id="carousel-container" [class]="toggleCaption ? 'enable-caption' : ''">
                         <amp-carousel id="carousel" width="800" height="600" layout="responsive" type="slides" controls="" loop="">
+                            <div class="slide-item">
+                                <amp-img src="img/5.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <div class="caption">We designed the TouchWood Films app and website. Link: <a href="https://www.touchwoodfilms.com" target="_blank">https://www.touchwoodfilms.com</a></div>
+                            </div>
+                            <div class="slide-item">
+                                <amp-img src="img/6.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
+                                <div class="caption">We designed the TouchWood Films app and website. Link: <a href="https://www.touchwoodfilms.com" target="_blank">https://www.touchwoodfilms.com</a></div>
+                            </div>
                             <div class="slide-item">
                                 <amp-img src="img/1.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
                                 <div class="caption">We rebuilt the Cold Stone Creamery website to be WCAG 2.0 (AA) ADA compliant and made the desktop view fully mobile responsive.</div>
@@ -161,14 +172,6 @@
                             <div class="slide-item black">
                                 <amp-vimeo data-videoid="319353755" width="800" height="600" layout="responsive"></amp-vimeo>
                                 <div class="caption">We filmed and edited the wedding video for Beth and Hayden.</div>
-                            </div>
-                            <div class="slide-item">
-                                <amp-img src="img/5.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">We designed the TouchWood Films app and website. Link: <a href="https://www.touchwoodfilms.com" target="_blank">https://www.touchwoodfilms.com</a></div>
-                            </div>
-                            <div class="slide-item">
-                                <amp-img src="img/6.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
-                                <div class="caption">We designed the TouchWood Films app and website. Link: <a href="https://www.touchwoodfilms.com" target="_blank">https://www.touchwoodfilms.com</a></div>
                             </div>
                             <div class="slide-item">
                                 <amp-img src="img/7.jpg" width="800" height="600" layout="responsive" alt=""></amp-img>
@@ -204,7 +207,7 @@
                 </div>
             </div>
         </section>
-        <section id="logos">
+        <section id="history">
             <div class="row">
                 <h1>our history</h1>
                 <p>We've worked for lots of great teams over the many years. Here are some of our favorite:</p>
@@ -269,12 +272,36 @@
                 </div>
             </div>
         </section>
-        <section class="fullscreen white-text background-two" id="contact">
+        <section class="fullscreen" id="contact">
+            <nav>
+                <div class="row">
+                    <div class="col logo">
+                        <a href="index.html">
+                            <amp-img src="img/logo-dopplercreative.svg" width="64" height="64" layout="responsive" alt=""></amp-img>
+                        </a>
+                    </div>
+                    <div class="col links">
+                        <amp-selector layout="container" multiple="">
+                            <a aria-selected="false" class="mobile-toggle" option="1" role="option">
+                                <amp-img alt="menu icon" height="14" layout="fixed" src="img/mobile-toggle.svg" width="22"> </amp-img>
+                            </a>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#work">Work</a></li>
+                                <li><a href="#team">Team</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </amp-selector>
+                    </div>
+                </div>
+            </nav>
             <div class="row">
                 <div class="col">
-                    <h1>contact us</h1>
-                    <p>Email <a href="mailto:isaiah@dopplercreative.com@gmail.com">isaiah@dopplercreative.com</a> for more information.</p>
-                    <a class="button" id="email-btn" href="mailto:isaiah@dopplercreative.com@gmail.com"><i class="material-icons">email</i> email</a>
+                    <ul>
+                        <li>Scottsdale, AZ</li>
+                        <li><strong>p</strong>602.448.5118</li>
+                        <li><strong>e</strong>isaiah@dopplercreative.com@gmail.com</li>
+                    </ul>
                 </div>
             </div>
         </section>
