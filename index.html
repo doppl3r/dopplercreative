@@ -36,7 +36,7 @@
             ul { list-style: none; padding: 0; margin: 0; }
             nav { position: absolute; top: 0; left: 0; padding: 24px 0; width: 100%; z-index: 1; user-select: none; }
             nav .row { max-width: 80%; margin: auto; flex-wrap: nowrap; }
-            nav .row .logo { display: flex; flex-grow: 0; padding: 0 0 0 36px; align-items: center; width: auto; }
+            nav .row .logo { display: flex; flex-grow: 1; padding: 0 0 0 36px; align-items: center; width: auto; }
             nav .row .logo a { width: 64px; }
             nav .mobile-toggle { display: none; /* default hidden */ }
             nav ul { display: flex; list-style: none; margin: 0; padding: 0; justify-content: flex-end; }
@@ -51,7 +51,7 @@
             #header p { margin: 0; text-align: left; font-size: 36px; line-height: 42px; letter-spacing: 2px;}
             #header .row .col { padding: 0 36px; }
             #about { background-color: #1c1c1c; color: #fff; }
-            #about p { color: #808080; padding-bottom: 48px; }
+            #about p { color: #bfbfbf; padding-bottom: 48px; }
             #about a { border-bottom: 2px solid #fff; font-family: 'GothamHTF-Black'; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
             #work { padding: 0; }
             #work .row { max-width: 100%; padding: 0; }
@@ -100,6 +100,7 @@
                 nav .mobile-toggle { display: block; position: absolute; top: 0; right: 0; padding: 21px 24px; cursor: pointer; border-radius: 12px; border-bottom-right-radius: 0; border-bottom-left-radius: 0; }
                 nav .mobile-toggle[selected],
                 nav .mobile-toggle:active { outline: none; cursor: pointer; background-color: #1c1c1c; }
+                nav .mobile-toggle:focus { outline: none; }
                 nav .mobile-toggle[selected] + ul { display: block; }
                 nav ul { display: none; /* hide default */ position: absolute; top: 60px; left: 0; width: 100%; background-color: #1c1c1c; padding: 36px 0; border-radius: 12px; border-top-right-radius: 0; }
                 nav ul li a { padding: 24px 12px; }
