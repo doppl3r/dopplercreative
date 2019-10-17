@@ -59,7 +59,7 @@
             #work .row [class*="col"]:before, 
             #work .row [class*="col"]:after { opacity: 0; position: absolute; transition: all 0.25s ease-out; }
             #work .row [class*="col"]:before { content: ''; background-color: rgba(0, 0, 0, 0.5); top: 0; right: 0; bottom: 0; left: 0; z-index: -1; }
-            #work .row [class*="col"]:after { content: attr(alt); color: #fff; font-family: 'GothamHTF-Black'; font-size: 32px; width: 100%; top: calc(50% - 16px); left: 0; }
+            #work .row [class*="col"]:after { content: attr(aria-label); color: #fff; font-family: 'GothamHTF-Black'; font-size: 32px; width: 100%; top: calc(50% - 16px); left: 0; }
             #work .row [class*="col"]:focus,
             #work .row [class*="col"]:focus { outline: none; }
             #work .row [class*="col"]:focus:before,
@@ -165,14 +165,14 @@
         </section>
         <section id="work">
             <div class="row">
-                <div class="col-6 img-1" tabindex="0" alt="Mobile Design"></div>
-                <div class="col-6 img-2" tabindex="0" alt="Graphic Design"></div>
+                <div class="col-6 img-1" tabindex="0" aria-label="Mobile Design"></div>
+                <div class="col-6 img-2" tabindex="0" aria-label="Graphic Design"></div>
             </div>
             <div class="row">
-                <div class="col-3 img-3" tabindex="0" alt="Marketing"></div>
-                <div class="col-3 img-4" tabindex="0" alt="Branding"></div>
-                <div class="col-3 img-5" tabindex="0" alt="Iconography"></div>
-                <div class="col-3 img-6" tabindex="0" alt="App design"></div>
+                <div class="col-3 img-3" tabindex="0" aria-label="Marketing"></div>
+                <div class="col-3 img-4" tabindex="0" aria-label="Branding"></div>
+                <div class="col-3 img-5" tabindex="0" aria-label="Iconography"></div>
+                <div class="col-3 img-6" tabindex="0" aria-label="App design"></div>
             </div>
         </section>
         <section id="trust">
