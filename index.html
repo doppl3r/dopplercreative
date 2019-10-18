@@ -115,11 +115,10 @@
                 #work .row .col-6 { padding: 0 0 75%; }
                 #work .row .col-3 { padding: 0 0 75%; }
                 #contact { padding-top: 0; }
+                #contact .logo { display: none; }
                 #contact ul { font-size: 12px; text-align: center; padding: 0; }
                 #contact ul li strong { padding-right: 4px; }
                 #contact nav { position: static; }
-                #contact .logo { display: none; }
-                #contact nav .mobile-toggle { display: none; }
                 #contact nav ul { position: static; padding: 0; display: block; }
             }
 
@@ -142,15 +141,15 @@
                     </a>
                 </div>
                 <div class="col links">
-                    <amp-selector layout="container" multiple="">
+                    <amp-selector layout="container" multiple="" id="nav-selector">
                         <a aria-selected="false" class="mobile-toggle" option="1" role="option">
                             <amp-img alt="menu icon" height="14" layout="fixed" src="img/mobile-toggle.svg" width="22"> </amp-img>
                         </a>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#team">Team</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="index.html" on="tap:nav-selector.clear">Home</a></li>
+                            <li><a href="#about" on="tap:nav-selector.clear">About</a></li>
+                            <li><a href="#team" on="tap:nav-selector.clear">Team</a></li>
+                            <li><a href="#contact" on="tap:nav-selector.clear">Contact</a></li>
                         </ul>
                     </amp-selector>
                 </div>
@@ -248,16 +247,11 @@
                         </a>
                     </div>
                     <div class="col links">
-                        <amp-selector layout="container" multiple="">
-                            <a aria-selected="false" class="mobile-toggle" option="1" role="option">
-                                <amp-img alt="menu icon" height="14" layout="fixed" src="img/mobile-toggle.svg" width="22"> </amp-img>
-                            </a>
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#team">Team</a></li>
-                            </ul>
-                        </amp-selector>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#team">Team</a></li>
+                        </ul>
                     </div>
                 </div>
             </nav>
