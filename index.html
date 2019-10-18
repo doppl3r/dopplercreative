@@ -40,7 +40,9 @@
             nav .row .logo a { width: 64px; }
             nav .mobile-toggle { display: none; /* default hidden */ }
             nav ul { display: flex; list-style: none; margin: 0; padding: 0; justify-content: flex-end; }
-            nav ul li a { display: block; font-family: 'GothamHTF-Black'; color: #fff; padding: 36px 24px; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; }
+            nav ul li { padding: 36px 24px; }
+            nav ul li a { padding: 0; border-bottom: 2px solid transparent; display: block; font-family: 'GothamHTF-Black'; color: #fff; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; }
+            nav ul li a:hover { border-bottom-color: #fff; }
             section { background-color: #fff; color: #1c1c1c; display: flex; flex-wrap: wrap; align-items: center; justify-content: stretch; overflow-x: hidden; padding: 96px 12px; position: relative; width: 100%; }
             section.fullscreen { min-height: 480px; height: calc(100vh - 128px); }
             section .row { width: 100%; max-width: 80%; margin: auto; }
@@ -97,20 +99,28 @@
                 section .row { max-width: 100%; }
                 nav .row { max-width: 100%; }
                 nav .row .logo { position: absolute; top: 24px; left: 36px; padding: 0; }
-                nav .mobile-toggle { display: block; position: absolute; top: 0; right: 0; padding: 21px 24px; cursor: pointer; border-radius: 12px; border-bottom-right-radius: 0; border-bottom-left-radius: 0; }
+                nav .mobile-toggle { display: block; position: absolute; top: 0; right: 0; padding: 21px 24px; cursor: pointer; border-radius: 12px; }
                 nav .mobile-toggle[selected],
-                nav .mobile-toggle:active { outline: none; cursor: pointer; background-color: #1c1c1c; }
-                nav .mobile-toggle:focus { outline: none; }
-                nav .mobile-toggle[selected] + ul { display: block; }
-                nav ul { display: none; /* hide default */ position: absolute; top: 60px; left: 0; width: 100%; background-color: #1c1c1c; padding: 36px 0; border-radius: 12px; border-top-right-radius: 0; }
-                nav ul li a { padding: 24px 12px; }
+                nav .mobile-toggle:focus,
+                nav .mobile-toggle:active { outline: none; cursor: pointer; }
+                nav .mobile-toggle[selected]:before { content: ''; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; background-color: #1c1c1c; animation: zoom-in 0.25s ease-in-out; animation-fill-mode: forwards; }
+                nav .mobile-toggle[selected] + ul { display: block; animation: zoom-in 0.25s ease-in-out; animation-fill-mode: forwards; }
+                nav ul { display: none; /* hide default */ position: absolute; top: 60px; left: 0; width: 100%; padding: 36px 0; border-radius: 12px; }
+                nav ul li { padding: 0; }
+                nav ul li a { padding: 24px 12px 8px; display: inline-block; }
                 #header { padding-bottom: 10%; }
                 #header p { font-size: 24px; line-height: 28px; }
                 #header .row .col { /* fix iphone bottom alignment */ padding: 0 36px; position: absolute; bottom: 10%; left: 0; }
                 #about #carousel-container .caption { font-size: 12px; }
                 #work .row .col-6 { padding: 0 0 75%; }
                 #work .row .col-3 { padding: 0 0 75%; }
-                #contact ul { font-size: 12px; }
+                #contact { padding-top: 0; }
+                #contact ul { font-size: 12px; text-align: center; padding: 0; }
+                #contact ul li strong { padding-right: 4px; }
+                #contact nav { position: static; }
+                #contact .logo { display: none; }
+                #contact nav .mobile-toggle { display: none; }
+                #contact nav ul { position: static; padding: 0; display: block; }
             }
 
             /* Fonts */
@@ -118,8 +128,8 @@
             @font-face { font-family: 'GothamHTF-Light'; src: url("fonts/GothamHTF-Light.eot"); src: url("fonts/GothamHTF-Light.eot?#iefix") format("embedded-opentype"), url("fonts/GothamHTF-Light.woff") format("woff"), url("fonts/GothamHTF-Light.ttf") format("truetype"), url("fonts/GothamHTF-Light.svg") format("svg"); }
             
             /* Animations */
-            @keyframes throb { 0% { transform: scale(1); } 50% { transform: scale(1.25); } 100% { transform: scale(1); } }
             @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+            @keyframes zoom-in { 0% { transform: scale(0.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
             @keyframes breathe { 0% { opacity: 0.75; } 100% { opacity: 0.25; } }
         </style>
     </head>
@@ -246,7 +256,6 @@
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="#about">About</a></li>
                                 <li><a href="#team">Team</a></li>
-                                <li><a href="#contact">Contact</a></li>
                             </ul>
                         </amp-selector>
                     </div>
