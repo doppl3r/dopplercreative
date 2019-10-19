@@ -23,6 +23,14 @@ AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype
 
 ExpiresActive on
 
+# NON WWW TO WWW
+RewriteCond %{HTTP_HOST} ^dopplercreative.com [NC]
+RewriteRule ^(.*)$ https://www.dopplercreative.com/$1 [L,R=301,NC]
+
+# HTTP TO HTTPS
+RewriteCond %{SERVER_PORT} 80
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 # Add a far future Expires header for fonts
 ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
 ExpiresByType application/x-font-ttf "access plus 1 year"
