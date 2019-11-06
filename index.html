@@ -45,7 +45,9 @@
             section { background-color: #fff; color: #1c1c1c; display: flex; flex-wrap: wrap; align-items: center; justify-content: stretch; overflow-x: hidden; padding: 96px 12px; position: relative; width: 100%; }
             section.fullscreen { min-height: 480px; height: calc(100vh - 128px); }
             section .row { width: 100%; max-width: 80%; margin: auto; }
-            
+            amp-image-lightbox { background-color: rgba(0, 0, 0, 0.25); }
+            amp-image-lightbox:after { background-color: #1c1c1c; border-radius: 999px; color: #fff; content: 'x'; cursor: pointer; font-family: 'Arial'; font-size: 24px; height: 36px; line-height: 36px; position: absolute; right: 5%; top: 5%; width: 64px; }
+
             /* section styling */
             #header { background: #17a8e1; background-image: url('img/header-boxel.jpg'); background-size: cover; background-position: center; color: #fff; align-content: flex-end; padding: 0 0 5% 0; }
             #header h1 { margin: 0; text-align: left; font-size: 18px; line-height: 21px; text-transform: uppercase; letter-spacing: 1px; }
