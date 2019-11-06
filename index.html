@@ -15,6 +15,7 @@
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <script async="" custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
         <script async="" custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+        <script async="" custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
         <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
         <style amp-custom="" type="text/css">
             /* CSS Normalizer */
@@ -56,24 +57,18 @@
             #work { padding: 0; }
             #work .row { max-width: 100%; padding: 0; }
             #work .row [class*="col"] { background-color: #f1f1f1; background-position: center; background-size: cover; position: relative; z-index: 0; display: flex; align-items: center; }
-            #work .row [class*="col"]:before, 
-            #work .row [class*="col"]:after { opacity: 0; position: absolute; transition: all 0.25s ease-out; }
-            #work .row [class*="col"]:before { content: ''; background-color: rgba(0, 0, 0, 0.5); top: 0; right: 0; bottom: 0; left: 0; z-index: -1; }
-            #work .row [class*="col"]:after { content: attr(aria-label); color: #fff; font-family: 'GothamHTF-Black'; font-size: 32px; width: 100%; top: calc(50% - 16px); left: 0; }
-            #work .row [class*="col"]:focus,
-            #work .row [class*="col"]:focus { outline: none; }
-            #work .row [class*="col"]:focus:before,
-            #work .row [class*="col"]:hover:before,
-            #work .row [class*="col"]:focus:after,
-            #work .row [class*="col"]:hover:after { opacity: 1; }
+            #work .row [class*="col"] amp-img:before, 
+            #work .row [class*="col"] amp-img:after { opacity: 0; position: absolute; transition: all 0.25s ease-out; }
+            #work .row [class*="col"] amp-img:before { content: ''; background-color: rgba(0, 0, 0, 0.5); top: 0; right: 0; bottom: 0; left: 0; pointer-events: none;  z-index: 1; }
+            #work .row [class*="col"] amp-img:after { content: attr(alt); color: #fff; font-family: 'GothamHTF-Black'; font-size: 32px; width: 100%; top: calc(50% - 16px); left: 0; pointer-events: none; z-index: 1; }
+            #work .row [class*="col"] amp-img:focus,
+            #work .row [class*="col"] amp-img:focus { outline: none; }
+            #work .row [class*="col"] amp-img:focus:before,
+            #work .row [class*="col"] amp-img:hover:before,
+            #work .row [class*="col"] amp-img:focus:after,
+            #work .row [class*="col"] amp-img:hover:after { opacity: 1; }
             #work .row .col-6 { padding: 0 0 37%; }
             #work .row .col-3 { padding: 0 0 18%; }
-            #work .img-1 { background-image: url('img/doppler-creative-mobile.png'); }
-            #work .img-2 { background-image: url('img/sytrus.png'); }
-            #work .img-3 { background-image: url('img/sticker-mule-club.png'); }
-            #work .img-4 { background-image: url('img/elijah-logo-gradient.jpg'); }
-            #work .img-5 { background-image: url('img/acjc-icon-set-dribbble.jpg'); }
-            #work .img-6 { background-image: url('img/elijah-email-comp.jpg'); }
             #trust h1 { width: 100%; }
             #trust p { padding-bottom: 48px; width: 100%; }
             #trust .row { max-width: 1024px; margin: auto; justify-content: center; }
@@ -169,15 +164,16 @@
             </div>
         </section>
         <section id="work">
+            <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
             <div class="row">
-                <div class="col-6 img-1" tabindex="0" aria-label="Mobile Design"></div>
-                <div class="col-6 img-2" tabindex="0" aria-label="Graphic Design"></div>
+                <div class="col-6"><amp-img alt="Mobile Design" src="img/doppler-creative-mobile.png" layout="fill" role="button" on="tap:lightbox"></amp-img></div>
+                <div class="col-6"><amp-img alt="Graphic Design" src="img/sytrus.png" layout="fill" role="button" on="tap:lightbox"></amp-img></div>
             </div>
             <div class="row">
-                <div class="col-3 img-3" tabindex="0" aria-label="Marketing"></div>
-                <div class="col-3 img-4" tabindex="0" aria-label="Branding"></div>
-                <div class="col-3 img-5" tabindex="0" aria-label="Iconography"></div>
-                <div class="col-3 img-6" tabindex="0" aria-label="App design"></div>
+                <div class="col-3"><amp-img alt="Marketing" src="img/sticker-mule-club.png" layout="fill" role="button" on="tap:lightbox"></amp-img></div>
+                <div class="col-3"><amp-img alt="Branding" src="img/elijah-logo-gradient.jpg" layout="fill" role="button" on="tap:lightbox"></amp-img></div>
+                <div class="col-3"><amp-img alt="Iconography" src="img/acjc-icon-set-dribbble.jpg" layout="fill" role="button" on="tap:lightbox"></amp-img></div>
+                <div class="col-3"><amp-img alt="App design" src="img/elijah-email-comp.jpg" layout="fill" role="button" on="tap:lightbox"></amp-img></div>
             </div>
         </section>
         <section id="trust">
