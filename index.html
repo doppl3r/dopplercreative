@@ -72,6 +72,10 @@
             #work .row [class*="col"] amp-img:hover:after { opacity: 1; }
             #work .row .col-6 { padding: 0 0 37%; }
             #work .row .col-3 { padding: 0 0 18%; }
+            #websites { background-color: #f1f1f1; position: relative; padding-bottom: 0px; }
+            #websites:after { background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.05) 100%); padding-bottom: 5%; content: ''; width: 100%; position: absolute; bottom: 0; left: 0; }
+            #websites .col-4 { overflow-y: hidden; max-height: 480px; position: relative; padding: 0 2.5%; margin: 5% 0 0; }
+            #websites amp-img { cursor: pointer; }
             #trust h1 { width: 100%; }
             #trust p { padding-bottom: 48px; width: 100%; }
             #trust .row { max-width: 1024px; margin: auto; justify-content: center; }
@@ -89,7 +93,7 @@
 
             /* Mobile responsive query */
             @media (max-width: 768px) {
-                h1 { font-size: 28px;  }
+                h1 { font-size: 28px; }
                 p { font-size: 18px; line-height: 24px; }
                 section { min-height: initial; }
                 section .row { max-width: 100%; }
@@ -177,6 +181,17 @@
                 <div class="col-3"><amp-img alt="Branding" src="img/elijah-logo-gradient.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
                 <div class="col-3"><amp-img alt="Iconography" src="img/acjc-icon-set-dribbble.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
                 <div class="col-3"><amp-img alt="App design" src="img/elijah-email-comp.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+            </div>
+        </section>
+        <section id="websites">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Recent Websites</h1>
+                    <p>Design, Development</p>
+                </div>
+                <div class="col-4"><amp-img width="1920" height="5033" alt="Knockwood Website" src="img/knockwood.jpg" layout="responsive" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-4"><amp-img width="1920" height="4104" alt="Core Website" src="img/core.jpg" layout="responsive" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-4"><amp-img width="1920" height="4521" alt="Sonnovita Website" src="img/sonnovita.jpg" layout="responsive" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
             </div>
         </section>
         <section id="trust">
