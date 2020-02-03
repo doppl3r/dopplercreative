@@ -27,8 +27,8 @@
             /* CSS Global */
             * { box-sizing: border-box; }
             html { animation: fade-in 1s ease-in-out; background-color: #1c1c1c; color: #1c1c1c; }
-            body { text-align: center; font-family: 'GothamHTF-Light'; }
-            h1 { font-family: 'GothamHTF-Black'; font-size: 40px; margin: 0; padding: 0 0 36px; }
+            body { text-align: center; font-family: 'Helvetica-Light'; }
+            h1 { font-family: 'Helvetica-Bold'; font-size: 40px; margin: 0; padding: 0 0 36px; }
             p { font-size: 24px; line-height: 28px; margin: 0 auto; max-width: 780px; padding: 0; word-break: break-word; }
             a { color: inherit; text-decoration: none; }
             ul { list-style: none; padding: 0; margin: 0; }
@@ -40,7 +40,7 @@
             nav .mobile-toggle { display: none; /* default hidden */ }
             nav ul { display: flex; list-style: none; margin: 0; padding: 0; justify-content: flex-end; }
             nav ul li { padding: 36px 24px; }
-            nav ul li a { padding: 0; border-bottom: 2px solid transparent; display: block; font-family: 'GothamHTF-Black'; color: #fff; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; }
+            nav ul li a { padding: 0; border-bottom: 2px solid transparent; display: block; font-family: 'Helvetica-Bold'; color: #fff; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; }
             nav ul li a:hover { border-bottom-color: #fff; }
             section { background-color: #fff; color: #1c1c1c; display: flex; flex-wrap: wrap; align-items: center; justify-content: stretch; overflow-x: hidden; padding: 96px 12px; position: relative; width: 100%; }
             section.fullscreen { min-height: 480px; height: calc(100vh - 128px); }
@@ -50,12 +50,12 @@
 
             /* section styling */
             #header { background: #17a8e1; background-image: url('img/header-boxel.jpg'); background-size: cover; background-position: center; color: #fff; align-content: flex-end; padding: 0 0 5% 0; }
-            #header h1 { margin: 0; text-align: left; font-size: 18px; line-height: 21px; text-transform: uppercase; letter-spacing: 1px; }
+            #header h1 { margin: 0; text-align: left; font-size: 18px; line-height: 21px; text-transform: uppercase; letter-spacing: 2px; }
             #header p { margin: 0; text-align: left; font-size: 36px; line-height: 42px; letter-spacing: 2px;}
             #header .row .col { padding: 0 36px; }
             #about { background-color: #1c1c1c; color: #fff; }
             #about p { color: #bfbfbf; padding-bottom: 48px; }
-            #about a { border-bottom: 2px solid #fff; font-family: 'GothamHTF-Black'; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+            #about a { border-bottom: 2px solid #fff; font-family: 'Helvetica-Bold'; font-size: 18px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
             #work { padding: 0; }
             #work .row { max-width: 100%; padding: 0; }
             #work .row [class*="col"] { background-color: #f1f1f1; background-position: center; background-size: cover; position: relative; z-index: 0; display: flex; align-items: center; }
@@ -63,7 +63,7 @@
             #work .row [class*="col"] amp-img:before, 
             #work .row [class*="col"] amp-img:after { opacity: 0; position: absolute; transition: all 0.25s ease-out; }
             #work .row [class*="col"] amp-img:before { content: ''; background-color: rgba(0, 0, 0, 0.5); top: 0; right: 0; bottom: 0; left: 0; pointer-events: none;  z-index: 1; }
-            #work .row [class*="col"] amp-img:after { content: attr(alt); color: #fff; font-family: 'GothamHTF-Black'; font-size: 32px; width: 100%; top: calc(50% - 16px); left: 0; pointer-events: none; z-index: 1; }
+            #work .row [class*="col"] amp-img:after { content: attr(alt); color: #fff; font-family: 'Helvetica-Bold'; font-size: 32px; width: 100%; top: calc(50% - 16px); left: 0; pointer-events: none; z-index: 1; }
             #work .row [class*="col"] amp-img:focus,
             #work .row [class*="col"] amp-img:focus { outline: none; }
             #work .row [class*="col"] amp-img:focus:before,
@@ -84,9 +84,9 @@
             #team .profile .thumbnail { position: relative; max-width: 240px; margin: auto; }
             #team .profile .thumbnail amp-img { position: relative; }
             #team .profile .thumbnail amp-iframe { overflow: hidden; position: absolute; top: 12px; left: 12px; }
-            #team .profile .name { font-family: 'GothamHTF-Black'; margin-top: 12px; }
+            #team .profile .name { font-family: 'Helvetica-Bold'; margin-top: 12px; }
             #team .profile .title { font-size: 18px; word-break: break-word; padding-bottom: 24px; max-width: 360px; }
-            #team .profile a { border-bottom: 2px solid #1c1c1c; font-family: 'GothamHTF-Black'; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+            #team .profile a { border-bottom: 2px solid #1c1c1c; font-family: 'Helvetica-Bold'; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
             #contact { background-color: #1c1c1c; color: #fff }
             #contact ul { text-align: left; line-height: 28px; padding-left: 28px; }
             #contact ul li strong { color: #808080; text-transform: uppercase; padding-right: 24px; }
@@ -123,8 +123,8 @@
             }
 
             /* Fonts */
-            @font-face { font-family: 'GothamHTF-Black'; src: url("fonts/GothamHTF-Black.eot"); src: url("fonts/GothamHTF-Black.eot?#iefix") format("embedded-opentype"), url("fonts/GothamHTF-Black.woff") format("woff"), url("fonts/GothamHTF-Black.ttf") format("truetype"), url("fonts/GothamHTF-Black.svg") format("svg"); }
-            @font-face { font-family: 'GothamHTF-Light'; src: url("fonts/GothamHTF-Light.eot"); src: url("fonts/GothamHTF-Light.eot?#iefix") format("embedded-opentype"), url("fonts/GothamHTF-Light.woff") format("woff"), url("fonts/GothamHTF-Light.ttf") format("truetype"), url("fonts/GothamHTF-Light.svg") format("svg"); }
+            @font-face { font-family: 'Helvetica-Bold'; src: url("fonts/Helvetica-Bold.eot"); src: url("fonts/Helvetica-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/Helvetica-Bold.woff") format("woff"), url("fonts/Helvetica-Bold.ttf") format("truetype"), url("fonts/Helvetica-Bold.svg") format("svg"); }
+            @font-face { font-family: 'Helvetica-Light'; src: url("fonts/Helvetica-Light.eot"); src: url("fonts/Helvetica-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Helvetica-Light.woff") format("woff"), url("fonts/Helvetica-Light.ttf") format("truetype"), url("fonts/Helvetica-Light.svg") format("svg"); }
             
             /* Animations */
             @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
