@@ -51,7 +51,7 @@
             amp-image-lightbox:after { background-color: #1c1c1c; border-radius: 999px; color: #fff; content: 'x'; cursor: pointer; font-family: 'Arial'; font-size: 24px; height: 36px; line-height: 36px; position: absolute; right: 5%; top: 5%; width: 64px; }
 
             /* section styling */
-            #header { background: #1c1c1c; background-image: url('img/header-websites.jpg'); background-size: cover; background-position: center; color: #fff; align-content: flex-end; padding: 0 0 5% 0; text-align: left; position: relative; }
+            #header { background: #1c1c1c; background-image: url('img/header-websites.jpg'); background-size: cover; background-position: 75% 50%; color: #fff; align-content: flex-end; padding: 0 0 5% 0; text-align: left; position: relative; }
             #header h1 { margin: 0; text-align: left; font-size: 18px; line-height: 21px; }
             #header p { margin: 0 0 24px; text-align: left; font-size: 36px; line-height: 42px; }
             #header a { display: inline-block; border-bottom: 2px solid #fff; font-weight: 400; font-size: 18px; margin-bottom: 12px; }
@@ -74,13 +74,14 @@
             #websites:after { background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.05) 100%); padding-bottom: 5%; content: ''; width: 100%; position: absolute; bottom: 0; left: 0; }
             #websites .col-3, #websites .col-4 { overflow-y: hidden; max-height: 320px; position: relative; padding: 0 2.5%; margin: 2.5% 0 0; }
             #websites amp-img { cursor: pointer; }
-            #trust { background-color: #e6e6e6; padding: 64px 0; }
+            #trust { background-color: #f1f1f1; padding: 64px 0; }
             #trust amp-img { filter: grayscale(1); }
             #trust h1 { width: 100%; }
             #trust p { padding-bottom: 48px; width: 100%; }
-            #trust .row { max-width: 1120px; margin: auto; justify-content: center; }
+            #trust .row { max-width: 80%; margin: auto; justify-content: center; }
             /* #trust img { filter: grayscale(100%); opacity: 0.75; } */
-            #team { background-color: #f1f1f1; }
+            #team { background-color: #fff; }
+            /* #team:after { background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.05) 100%); padding-bottom: 5%; content: ''; width: 100%; position: absolute; bottom: 0; left: 0; } */
             #team .profile { padding: 24px 12px; display: block; }
             #team .profile .thumbnail { position: relative; max-width: 240px; margin: auto; overflow: hidden; }
             #team .profile .thumbnail amp-img { position: relative; }
@@ -110,8 +111,9 @@
                 nav ul li { padding: 12px 24px; }
                 nav ul li a { display: inline-block; font-size: 21px; }
                 #header { padding: 0 5% 10%; }
-                #header p { font-size: 24px; line-height: 28px; }
-                #header .row .col { /* fix iphone bottom alignment */ padding: 0 36px; position: absolute; bottom: 10%; left: 0; }
+                #header h1 { padding-bottom: 12px; }
+                #header p { font-size: 21px; line-height: 24px; }
+                #header .row .col-6-m { background-color: rgba(28, 28, 28, 0.95); padding: 24px 24px 0; }
                 #about #carousel-container .caption { font-size: 12px; }
                 #work .row [class*="col"] { padding: 0 0 71.25%; }
                 #contact { padding-top: 0; }
@@ -236,18 +238,18 @@
         </section>
         <section id="trust">
             <div class="row">
-                <div class="col-3 col-6-m"><a href="https://www.truefoodkitchen.com" target="_blank"><amp-img src="img/logos-assets/logo-truefoodkitchen.png" width="256" height="128" layout="responsive"></amp-img></a></div>
-                <div class="col-3 col-6-m"><a href="https://www.coldstonecreamery.com" target="_blank"><amp-img src="img/logos-assets/logo-coldstone.png" width="256" height="128" layout="responsive"></amp-img></a></div>
-                <div class="col-3 col-6-m"><a href="http://www.pinkberry.com" target="_blank"><amp-img src="img/logos-assets/logo-pinkberry.png" width="256" height="128" layout="responsive"></amp-img></a></div>
-                <div class="col-3 col-6-m"><a href="https://www.bajafresh.com" target="_blank"><amp-img src="img/logos-assets/logo-bajafresh.png" width="256" height="128" layout="responsive"></amp-img></a></div>
-                <div class="col-3 col-6-m"><a href="https://www.karismahotels.com" target="_blank"><amp-img src="img/logos-assets/logo-karisma-hotels.png" width="256" height="128" layout="responsive"></amp-img></a></div>
-                <div class="col-3 col-6-m"><a href="https://www.camdenmaine.com/" target="_blank"><amp-img src="img/logos-assets/logo-camdenmaine.png" width="256" height="128" layout="responsive"></amp-img></a></div>
-                <div class="col-3 col-6-m"><a href="https://www.blimpie.com" target="_blank"><amp-img src="img/logos-assets/logo-blimpie.png" width="256" height="128" layout="responsive"></amp-img></a></div>
-                <div class="col-3 col-6-m"><a href="https://www.lasalsa.com" target="_blank"><amp-img src="img/logos-assets/logo-lasalsa.png" width="256" height="128" layout="responsive"></amp-img></a></div>
-                <div class="col-3 col-6-m"><a href="http://yanocreative.com" target="_blank"><amp-img src="img/logos-assets/logo-yano.png" width="256" height="128" layout="responsive"></amp-img></a></div>
-                <div class="col-3 col-6-m"><a href="https://parsus.com" target="_blank"><amp-img src="img/logos-assets/logo-parsus.png" width="256" height="128" layout="responsive"></amp-img></a></div>
-                <div class="col-3 col-6-m"><a href="https://redeemerrbc.com" target="_blank"><amp-img src="img/logos-assets/logo-redeemerrbc.png" width="256" height="128" layout="responsive"></amp-img></a></div>
-                <div class="col-3 col-6-m"><a href="https://harvestbiblechurch.com" target="_blank"><amp-img src="img/logos-assets/logo-harvestbc.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-2 col-6-m"><a href="https://www.truefoodkitchen.com" target="_blank"><amp-img src="img/logos-assets/logo-truefoodkitchen.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-2 col-6-m"><a href="https://www.coldstonecreamery.com" target="_blank"><amp-img src="img/logos-assets/logo-coldstone.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-2 col-6-m"><a href="http://www.pinkberry.com" target="_blank"><amp-img src="img/logos-assets/logo-pinkberry.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-2 col-6-m"><a href="https://www.bajafresh.com" target="_blank"><amp-img src="img/logos-assets/logo-bajafresh.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-2 col-6-m"><a href="https://www.karismahotels.com" target="_blank"><amp-img src="img/logos-assets/logo-karisma-hotels.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-2 col-6-m"><a href="https://www.camdenmaine.com/" target="_blank"><amp-img src="img/logos-assets/logo-camdenmaine.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-2 col-6-m"><a href="https://www.blimpie.com" target="_blank"><amp-img src="img/logos-assets/logo-blimpie.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-2 col-6-m"><a href="https://www.lasalsa.com" target="_blank"><amp-img src="img/logos-assets/logo-lasalsa.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-2 col-6-m"><a href="http://yanocreative.com" target="_blank"><amp-img src="img/logos-assets/logo-yano.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-2 col-6-m"><a href="https://parsus.com" target="_blank"><amp-img src="img/logos-assets/logo-parsus.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-2 col-6-m"><a href="https://redeemerrbc.com" target="_blank"><amp-img src="img/logos-assets/logo-redeemerrbc.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+                <div class="col-2 col-6-m"><a href="https://harvestbiblechurch.com" target="_blank"><amp-img src="img/logos-assets/logo-harvestbc.png" width="256" height="128" layout="responsive"></amp-img></a></div>
             </div>
         </section>
         <section class="fullscreen top-border" id="contact">
