@@ -11,25 +11,25 @@
         <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
         <style amp-custom="" type="text/css">
             body { display: flex; align-items: center; justify-content: center; height: 100vh; overflow: hidden; margin: 0; animation: fade-in 1s ease-in-out; }
-            body #countdown { font-family: 'Share Tech Mono', monospace; font-size: 35vw; }
+            body #countdown { font-family: 'Share Tech Mono', monospace; font-size: 35vw; text-shadow: 0 10px 50px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05); }
             @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
         </style>
     </head>
 	<body>
-        <div id="countdown">--:--</div>
+        <div id="countdown">00:00</div>
         <script>
             var urlParams = new URLSearchParams(window.location.search);
-            var minutes = parseInt(urlParams.get('minutes'));
+            var minutes = urlParams.get('minutes');
             var countdown = document.querySelector('#countdown');
             var color = urlParams.get('color');
             if (minutes == null) minutes = 5;
-            if (color == null) color = "black";
+            if (color == null) color = "white";
 
             // Change color
             countdown.style.color = color;
 
             // Start countdown on window load
-            window.onload = function () { startTimer(minutes * 60, countdown); };
+            window.onload = function () { startTimer(parseInt(minutes) * 60, countdown); };
 
             function startTimer(duration, countdown) {
                 var timer = duration, min, sec;
