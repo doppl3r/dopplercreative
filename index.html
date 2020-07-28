@@ -21,14 +21,15 @@
         <style amp-custom="" type="text/css">
             /* CSS Normalizer */
             html { line-height: 1.15; -webkit-text-size-adjust: 100%; } body { margin: 0; } h1 { font-size: 2em; margin: 0.67em 0; } hr { box-sizing: content-box; height: 0; overflow: visible; } pre { font-family: monospace, monospace; font-size: 1em; } a { background-color: transparent; } abbr[title] { border-bottom: none; text-decoration: underline; text-decoration: underline dotted; } b, strong { font-weight: 400; } code, kbd, samp { font-family: monospace, monospace; font-size: 1em; } small { font-size: 80%; } sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; } sub { bottom: -0.25em; } sup { top: -0.5em; } img { border-style: none; } button, input, optgroup, select, textarea { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0; } button, input { overflow: visible; } button, select { text-transform: none; } button, [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; } button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner { border-style: none; padding: 0; } button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring { outline: 1px dotted ButtonText; } fieldset { padding: 0.35em 0.75em 0.625em; } legend { box-sizing: border-box; color: inherit; display: table; max-width: 100%; padding: 0; white-space: normal; } progress { vertical-align: baseline; } textarea { overflow: auto; } [type="checkbox"], [type="radio"] { box-sizing: border-box; padding: 0; } [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button { height: auto; } [type="search"] { -webkit-appearance: textfield; outline-offset: -2px; } [type="search"]::-webkit-search-decoration { -webkit-appearance: none; } ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; } details { display: block; } summary { display: list-item; } template { display: none; } [hidden] { display: none; }
-            
+            html :focus { outline: none; }
+
             /* CSS Grid System - https://github.com/doppl3r/grix */
             .row{display:flex;flex-wrap:wrap}.row>[class*="col-"]{box-sizing:border-box;padding:0 12px;flex-grow:0}.row>.col{box-sizing:border-box;-ms-flex-preferred-size:0;-ms-flex-positive:1;flex:1 0 0;padding:0 12px;width:100%}.row>.col-1-m{width:8.3334%}.row>.col-2-m{width:16.6667%}.row>.col-3-m{width:25%}.row>.col-4-m{width:33.3334%}.row>.col-5-m{width:41.6667%}.row>.col-6-m{width:50%}.row>.col-7-m{width:58.3334%}.row>.col-8-m{width:66.6667%}.row>.col-9-m{width:75%}.row>.col-10-m{width:83.3334%}.row>.col-11-m{width:91.6667%}.row>.col-12-m{width:100%}.row>.col-1{width:8.3334%}.row>.col-2{width:16.6667%}.row>.col-3{width:25%}.row>.col-4{width:33.3334%}.row>.col-5{width:41.6667%}.row>.col-6{width:50%}.row>.col-7{width:58.3334%}.row>.col-8{width:66.6667%}.row>.col-9{width:75%}.row>.col-10{width:83.3334%}.row>.col-11{width:91.6667%}.row>.col-12{width:100%}@media (max-width: 768px){.row>[class*="col-"].col-1-m{width:8.3334%}.row>[class*="col-"].col-2-m{width:16.6667%}.row>[class*="col-"].col-3-m{width:25%}.row>[class*="col-"].col-4-m{width:33.3334%}.row>[class*="col-"].col-5-m{width:41.6667%}.row>[class*="col-"].col-6-m{width:50%}.row>[class*="col-"].col-7-m{width:58.3334%}.row>[class*="col-"].col-8-m{width:66.6667%}.row>[class*="col-"].col-9-m{width:75%}.row>[class*="col-"].col-10-m{width:83.3334%}.row>[class*="col-"].col-11-m{width:91.6667%}.row>[class*="col-"].col-12-m{width:100%}.row>.col-1{width:100%}.row>.col-2{width:100%}.row>.col-3{width:100%}.row>.col-4{width:100%}.row>.col-5{width:100%}.row>.col-6{width:100%}.row>.col-7{width:100%}.row>.col-8{width:100%}.row>.col-9{width:100%}.row>.col-10{width:100%}.row>.col-11{width:100%}.row>.col-12{width:100%}}
 
             /* CSS Global */
             * { box-sizing: border-box; }
             html { animation: fade-in 1s ease-in-out; background-color: #1c1c1c; color: #1c1c1c; scroll-behavior: smooth; }
-            body { text-transform: lowercase; text-align: center; font-family: 'Helvetica'; font-weight: 100; }
+            body { text-align: center; font-family: 'Helvetica'; font-weight: 100; }
             h1 { font-weight: 400; font-size: 40px; margin: 0; padding: 0 0 36px; }
             p { font-size: 24px; line-height: 28px; margin: 0 auto; max-width: 540px; padding: 0; word-break: break-word; }
             a { color: inherit; text-decoration: none; }
@@ -48,6 +49,7 @@
             section.fullscreen { min-height: 640px; height: calc(100vh - 160px); }
             section.top-border:before { border-radius: 999px; content: ''; width: 25%; height: 16px; top: -8px; left: 37.5%; z-index: 1; background: linear-gradient(45deg, rgba(109,75,255,1) 0%, rgba(254,123,237,1) 100%); position: absolute; }
             section .row { width: 100%; max-width: 80%; margin: auto; }
+            section h1 + p { margin-bottom: 24px; }
             amp-image-lightbox { background-color: rgba(0, 0, 0, 0.5); }
             amp-image-lightbox:after { background-color: #1c1c1c; border-radius: 999px; color: #fff; content: 'x'; cursor: pointer; font-family: 'Arial'; font-size: 24px; height: 36px; line-height: 36px; position: absolute; right: 5%; top: 5%; width: 64px; }
 
@@ -58,20 +60,25 @@
             #header a { display: inline-block; border-bottom: 2px solid #fff; font-weight: 400; font-size: 18px; margin-bottom: 12px; }
             #header:after{ background: linear-gradient(to top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%); height: 48px; bottom: 0; width: 100%; position: absolute; content: ''; }
             #about { background-color: #1c1c1c; color: #fff; padding: 96px 0 0; }
-            #about p { color: #bfbfbf; padding: 0 16px 48px; }
+            #about p { color: #bfbfbf; }
             #about a { display: inline-block; border-bottom: 2px solid #fff; font-weight: 400; font-size: 18px; margin-bottom: 12px; }
             #work { background-color: #1c1c1c; padding: 0 0 112px; }
             #work .row { max-width: 100%; padding: 0 5%; justify-content: center; }
             #work .row .col-3 { padding: 0 0 18.75%; }
             #work .row .col-4 { padding: 0 0 25%; }
             #work .row [class*="col"] {  background-color: #1c1c1c; background-position: center; background-size: cover; position: relative; z-index: 0; display: flex; align-items: center; margin: 2.5%; }
-            #work .row [class*="col"] amp-img { border-radius: 12px; cursor: pointer; display: flex; justify-content: flex-start; align-items: flex-start; }
-            #work .row [class*="col"] amp-img:after { border-radius: 999px; transition: all 0.25s ease-out; content: attr(alt); color: #fff; font-weight: 400; font-size: 16px; pointer-events: none; z-index: 1; padding: 8px 16px; background-color: rgba(28, 28, 28, 0.95); margin: 8px; }
-            #work .row [class*="col"] amp-youtube { border-radius: 12px; }
+            #work .row [class*="col"]:before { content: ''; transition: all 0.25s ease-out; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; background: linear-gradient(45deg, #6d4bff 0%, #fe7bed 100%); transform: rotate(0deg) scale(1); opacity: 0; border-radius: 4px; }
+            #work .row [class*="col"]:hover:before,
+            #work .row [class*="col"]:focus-within:before { transform: rotate(5deg) scale(1.05); opacity: 1; }
+            #work .row [class*="col"] amp-img { border-radius: 4px; cursor: pointer; display: flex; justify-content: flex-start; align-items: flex-start; }
+            #work .row [class*="col"] amp-img:after { border-radius: 4px; opacity: 0; transition: all 0.25s ease-out; content: attr(alt); color: #fff; font-weight: 400; font-size: 16px; pointer-events: none; z-index: 1; padding: 8px 16px; background: linear-gradient(45deg, #6d4bff 0%, #fe7bed 100%); position: absolute; bottom: 0; margin: 8px; }
+            #work .row [class*="col"] amp-img:hover:after,
+            #work .row [class*="col"] amp-img:focus:after { opacity: 1; }
+            #work .row [class*="col"] amp-youtube { border-radius: 4px; }
             #websites { background-color: #f1f1f1; position: relative; padding-bottom: 0px; }
             #websites:after { background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.05) 100%); padding-bottom: 5%; content: ''; width: 100%; position: absolute; bottom: 0; left: 0; }
             #websites .col-3, #websites .col-4 { overflow-y: hidden; max-height: 320px; position: relative; padding: 0 2.5%; margin: 2.5% 0 0; }
-            #websites amp-img { cursor: pointer; border-radius: 12px; }
+            #websites amp-img { cursor: pointer; border-radius: 4px; }
             #trust { background-color: #f1f1f1; padding: 64px 0; }
             #trust amp-img { filter: grayscale(1); }
             #trust h1 { width: 100%; }
@@ -82,10 +89,10 @@
             /* #team:after { background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.05) 100%); padding-bottom: 5%; content: ''; width: 100%; position: absolute; bottom: 0; left: 0; } */
             #team .profile { padding: 24px 12px; display: block; }
             #team .profile .thumbnail { position: relative; max-width: 240px; margin: auto; overflow: hidden; }
-            #team .profile .thumbnail amp-img { border-radius: 12px; position: relative; }
+            #team .profile .thumbnail amp-img { border-radius: 4px; position: relative; }
             #team .profile .thumbnail amp-iframe { overflow: hidden; position: absolute; top: 12px; left: 12px; }
             #team .profile .name { font-weight: 400; margin: 24px auto 12px; }
-            #team .profile .title { font-size: 18px; word-break: break-word; padding-bottom: 24px; max-width: 360px; }
+            #team .profile .title { font-size: 18px; word-break: break-word; padding-bottom: 24px; max-width: 280px; }
             #team .profile a { border-bottom: 2px solid #1c1c1c; font-weight: 400; font-size: 18px; margin-bottom: 12px; }
             #contact { background-color: #1c1c1c; color: #fff; }
             #contact ul { text-align: left; line-height: 28px; padding-left: 28px; }
@@ -100,13 +107,13 @@
                 section .row { max-width: 100%; }
                 nav .row { max-width: 100%; }
                 nav .row .logo { align-items: flex-start; }
-                nav .mobile-toggle { display: block; padding: 21px 24px; cursor: pointer; border-radius: 12px; }
+                nav .mobile-toggle { display: block; padding: 21px 24px; cursor: pointer; border-radius: 0px; }
                 nav .mobile-toggle.active,
                 nav .mobile-toggle:focus,
                 nav .mobile-toggle:active { outline: none; cursor: pointer; }
                 nav .mobile-toggle.active:before { content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; height: calc(100vh - 128px); min-height: 640px; z-index: -1; background-color: rgba(28, 28, 28, 0.95); animation: zoom-in 0.25s ease-in-out; animation-fill-mode: forwards; }
                 nav .mobile-toggle.active + ul { display: block; animation: zoom-in 0.25s ease-in-out; animation-fill-mode: forwards; }
-                nav ul { display: none; /* hide default */ width: 100%; padding: 48px 0; border-radius: 12px; text-align: right; }
+                nav ul { display: none; /* hide default */ width: 100%; padding: 48px 0; border-radius: 0px; text-align: right; }
                 nav ul li { padding: 12px 24px; }
                 nav ul li a { display: inline-block; font-size: 21px; }
                 nav ul li a.button { transform: translateX(24px); }
@@ -167,80 +174,6 @@
                 </div>
             </div>
         </section>
-        <section id="about" class="top-border">
-            <div class="row">
-                <div class="col">
-                    <h1>content 360°</h1>
-                    <p>We provide everything you need to start and maintain your website.</p>
-                </div>
-            </div>
-        </section>
-        <section id="work">
-            <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
-            <div class="row">
-                <div class="col-3"><amp-img alt="WordPress Development" src="img/doppler-locations-dribbble.png" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
-                <div class="col-3"><amp-img alt="Web Design" src="img/lobro-update.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
-                <div class="col-3"><amp-img alt="Animations" src="img/animations-desk.gif" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
-                <div class="col-3"><amp-img alt="Marketing" src="img/sticker-mule-club.png" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
-                <div class="col-3"><amp-img alt="Illustrations" src="img/lucky-dice.png" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
-                <div class="col-3"><amp-img alt="Branding" src="img/10.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
-                <div class="col-3"><amp-img alt="Photography" src="img/photography.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
-                <div class="col-3"><amp-img alt="Promotions" src="img/10-2.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
-                <div class="col-3">
-                    <amp-youtube id="video" data-videoid="If7PtZl5Oj0" layout="fill" width="480" height="270" tabindex="0"></amp-youtube>
-                    <amp-img id="poster" alt="Videos" layout="fill" src="img/video-thumbnail.jpg" role="button" on="tap:video.play, poster.hide" tabindex="0"></amp-img>
-                </div>
-            </div>
-        </section>
-        <section id="websites" class="top-border">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Recent Websites</h1>
-                </div>
-                <div class="col-3"><amp-img width="1423" height="2899" alt="True Food Kitchen Website" src="img/truefoodkitchen.jpg" layout="responsive" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
-                <div class="col-3"><amp-img width="1920" height="6400" alt="Touchwood Website" src="img/touchwood.jpg" layout="responsive" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
-                <div class="col-3"><amp-img width="1920" height="5033" alt="Knockwood Website" src="img/knockwood.jpg" layout="responsive" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
-                <div class="col-3"><amp-img width="1920" height="6421" alt="Lobro Website" src="img/lobro.jpg" layout="responsive" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
-            </div>
-        </section>
-        <section id="team">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Our Team</h1>
-                </div>
-                <div class="col-4">
-                    <div class="profile">
-                        <div class="thumbnail">
-                            <amp-img src="img/jacob.jpg" width="192px" height="192px" layout="responsive"></amp-img>
-                        </div>
-                        <p class="name">Jacob</p>
-                        <p class="title">Developer and Designer over web and mobile applications</p>
-                        <a href="https://github.com/doppl3r" target="_blank">Github</a>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="profile">
-                        <div class="thumbnail">
-                            <amp-img src="img/isaiah.jpg" width="192px" height="192px" layout="responsive"></amp-img>
-                            <amp-iframe src="https://raw.githack.com/doppl3r/twitch-status/master/index.html?user_name=kargoh" width="82px" height="32px" layout="fixed" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation"></amp-iframe>
-                        </div>
-                        <p class="name">Isaiah</p>
-                        <p class="title">Developer and Manager over web and mobile applications</p>
-                        <a href="https://twitch.tv/kargoh" target="_blank">Twitch</a>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="profile">
-                        <div class="thumbnail">
-                            <amp-img src="img/elijah.jpg" width="192px" height="192px" layout="responsive"></amp-img>
-                        </div>
-                        <p class="name">Elijah</p>
-                        <p class="title">Lead Designer over branding, web, UI and videos</p>
-                        <a href="https://dribbble.com/elijahdeben" target="_blank">dribbble</a>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section id="trust">
             <div class="row">
                 <div class="col-2 col-6-m"><a href="https://www.truefoodkitchen.com" target="_blank"><amp-img src="img/logos-assets/logo-truefoodkitchen.png" width="256" height="128" layout="responsive"></amp-img></a></div>
@@ -255,6 +188,90 @@
                 <div class="col-2 col-6-m"><a href="https://parsus.com" target="_blank"><amp-img src="img/logos-assets/logo-parsus.png" width="256" height="128" layout="responsive"></amp-img></a></div>
                 <div class="col-2 col-6-m"><a href="https://redeemerrbc.com" target="_blank"><amp-img src="img/logos-assets/logo-redeemerrbc.png" width="256" height="128" layout="responsive"></amp-img></a></div>
                 <div class="col-2 col-6-m"><a href="https://harvestbiblechurch.com" target="_blank"><amp-img src="img/logos-assets/logo-harvestbc.png" width="256" height="128" layout="responsive"></amp-img></a></div>
+            </div>
+        </section>
+        <section id="about" class="top-border">
+            <div class="row">
+                <div class="col">
+                    <h1>content 360°</h1>
+                    <p>We provide everything you need to start and maintain your website.</p>
+                </div>
+            </div>
+        </section>
+        <section id="work">
+            <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
+            <div class="row">
+                <div class="col-3"><amp-img alt="WordPress Development" src="img/tfk-webdev.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Marketing" src="img/promotions.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Web Design" src="img/7.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Front-end Development" src="img/karisma-thumbnail.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Front-end Development" src="img/woodspring-screenshot.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Web Support" src="img/camdenmaine-concept.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Web Design" src="img/boxel3d.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Software Development" src="img/doppler-locations-dribbble.png" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Web Design" src="img/6.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="3D Graphics" src="img/boxel3d-gold.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Web Design" src="img/lobro-update.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Web Development" src="img/sonnovita-thumbnail.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Motion Graphics" src="img/animations-desk.gif" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Motion Graphics" src="img/keys-to-success.gif" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="3D Animations" src="img/animations.gif" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Illustrations" src="img/lucky-dice.png" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Illustrations" src="img/sytrus.png" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Graphic Design" src="img/boxel3d-icons.png" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Game Development" src="img/14.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Illustrations" src="img/thank-you-dribbble.png" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img alt="Branding" src="img/twitch-illustrations.png" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+            </div>
+        </section>
+        <section id="websites" class="top-border">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Recent projects</h1>
+                    <p>We're always working on fun projects. Check out some of our latest work.</p>
+                </div>
+                <div class="col-3"><amp-img width="1423" height="2899" alt="True Food Kitchen Website" src="img/truefoodkitchen.jpg" layout="responsive" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img width="1920" height="6400" alt="Touchwood Website" src="img/touchwood.jpg" layout="responsive" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img width="1920" height="5033" alt="Knockwood Website" src="img/knockwood.jpg" layout="responsive" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+                <div class="col-3"><amp-img width="1920" height="6421" alt="Lobro Website" src="img/lobro.jpg" layout="responsive" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
+            </div>
+        </section>
+        <section id="team">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Our Team</h1>
+                    <p>In 2019, three brothers ventured out to build a creative agency. Nearly a year later, they continue their adventure working for restaurants, hospitality, and digital clients like you.</p>
+                </div>
+                <div class="col-4">
+                    <div class="profile">
+                        <div class="thumbnail">
+                            <amp-img src="img/jacob.jpg" width="192px" height="192px" layout="responsive"></amp-img>
+                        </div>
+                        <p class="name">Jacob</p>
+                        <p class="title">Designed at the award winning design agency, Yano Creative, for 4 years. Developed websites at the industry's leading franchise, MTY Group, for 2 years.</p>
+                        <a href="https://github.com/doppl3r" target="_blank">Github</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="profile">
+                        <div class="thumbnail">
+                            <amp-img src="img/isaiah.jpg" width="192px" height="192px" layout="responsive"></amp-img>
+                        </div>
+                        <p class="name">Isaiah</p>
+                        <p class="title">Developed websites at Doppler Creative since 2019. Performs all Twitch live stream operations. Actively pursing a degree in Computer Programming.</p>
+                        <a href="https://twitch.tv/kargoh" target="_blank">Twitch</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="profile">
+                        <div class="thumbnail">
+                            <amp-img src="img/elijah.jpg" width="192px" height="192px" layout="responsive"></amp-img>
+                        </div>
+                        <p class="name">Elijah</p>
+                        <p class="title">Designed at the award winning design agency, Yano Creative, for 1 year as an assistant intern. Actively pursuing a degree in Graphic Design.</p>
+                        <a href="https://dribbble.com/elijahdeben" target="_blank">dribbble</a>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="fullscreen top-border" id="contact">
