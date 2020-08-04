@@ -48,6 +48,11 @@
             section { background-color: #fff; color: #1c1c1c; display: flex; flex-wrap: wrap; align-items: center; justify-content: stretch; padding: 96px 12px; position: relative; width: 100%; }
             section.fullscreen { min-height: 640px; height: calc(100vh - 160px); }
             section.top-border:before { border-radius: 999px; content: ''; width: 25%; height: 16px; top: -8px; left: 37.5%; z-index: 1; background: linear-gradient(45deg, rgba(109,75,255,1) 0%, rgba(254,123,237,1) 100%); position: absolute; }
+            section.bottom-shadow:after { background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.05) 100%); padding-bottom: 5%; content: ''; width: 100%; position: absolute; bottom: 0; left: 0; }
+            section.bottom-angle:after { background: #fff; padding-bottom: 5%; content: ''; width: 100%; position: absolute; bottom: -1px; left: 0; clip-path: polygon(0 0, 0 100%, 100% 100%); }
+            section.bottom-angle.right:after { clip-path: polygon(0 100%, 100% 0, 100% 100%); }
+            section.bottom-angle.black:after { background-color: #1c1c1c; }
+            section.bottom-angle.gray:after { background-color: #f1f1f1; }
             section .row { width: 100%; max-width: 80%; margin: auto; }
             section h1 + p { margin-bottom: 24px; }
             amp-image-lightbox { background-color: rgba(0, 0, 0, 0.5); }
@@ -76,7 +81,6 @@
             #work .row [class*="col"] amp-img:focus:after { opacity: 1; }
             #work .row [class*="col"] amp-youtube { border-radius: 4px; }
             #websites { background-color: #f1f1f1; position: relative; padding-bottom: 0px; }
-            #websites:after { background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.05) 100%); padding-bottom: 5%; content: ''; width: 100%; position: absolute; bottom: 0; left: 0; }
             #websites .col-3, #websites .col-4 { overflow-y: hidden; max-height: 320px; position: relative; padding: 0 2.5%; margin: 2.5% 0 0; }
             #websites amp-img { cursor: pointer; border-radius: 4px; }
             #trust { background-color: #f1f1f1; padding: 64px 0; }
@@ -118,7 +122,6 @@
                 nav ul li a { display: inline-block; font-size: 21px; }
                 nav .button { transform: translateX(24px); }
                 #header { padding: 0 5% 10%; background-position: 75% 50%; text-align: center; }
-                
                 #header h1 { padding-bottom: 12px; text-align: center; }
                 #header p { font-size: 21px; line-height: 24px; text-align: center; }
                 #header .row .col-6 { background-color: rgba(28, 28, 28, 0.9); padding: 24px; position: absolute; left: 0; bottom: 0; right: 0; }
@@ -127,7 +130,6 @@
                 #work .row [class*="col"] { padding: 0 0 33.75%; width: 45%; margin: 0 0 12px; }
                 #work .row [class*="col"] amp-img:after { font-size: 10px; }
                 #websites { padding: 96px 0 0; }
-                #websites:after { display: none; }
                 #websites h1 { padding: 0; }
                 #websites .row [class*="col"] { padding: 32px; }
                 #websites .row [class*="col"]:after { background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.05) 100%); padding-bottom: 5%; content: ''; width: 100%; position: absolute; bottom: 0; left: 0; }
@@ -202,7 +204,7 @@
                 </div>
             </div>
         </section>
-        <section id="work">
+        <section id="work" class="bottom-angle right gray">
             <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
             <div class="row">
                 <div class="col-3"><amp-img alt="WordPress" src="img/tfk-webdev.jpg" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
@@ -228,7 +230,7 @@
                 <div class="col-3"><amp-img alt="Branding" src="img/twitch-illustrations.png" layout="fill" role="button" on="tap:lightbox" tabindex="0"></amp-img></div>
             </div>
         </section>
-        <section id="websites" class="top-border">
+        <section id="websites" class="bottom-angle">
             <div class="row">
                 <div class="col-12">
                     <h1>Recent projects</h1>
